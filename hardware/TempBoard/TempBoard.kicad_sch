@@ -4,6 +4,11 @@
 	(generator_version "9.0")
 	(uuid "9258ccab-0ef6-442d-b425-b92e09dff747")
 	(paper "A4")
+	(title_block
+		(title "Temperature / Humidity Board")
+		(date "2025-10-27")
+		(rev "A")
+	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
 			(pin_numbers
@@ -1341,6 +1346,26 @@
 			(embedded_fonts no)
 		)
 	)
+	(text "Connectors will \nprobably be nanofit"
+		(exclude_from_sim no)
+		(at 185.674 23.114 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "0c14ea0b-c6d5-41d8-b299-a522704c0e49")
+	)
+	(text "I2C is enabled when CSB\nis connected to VDDIO"
+		(exclude_from_sim no)
+		(at 94.996 68.834 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "d3fdecfe-68ab-485a-b9ab-6b8190f836c6")
+	)
 	(text "GND Address: 0x76\nVDDIO: 0x77\n"
 		(exclude_from_sim no)
 		(at 64.008 32.004 0)
@@ -1350,6 +1375,16 @@
 			)
 		)
 		(uuid "db2f1e77-c9da-44c2-9069-f969459e0a23")
+	)
+	(text "SDO --> address bit"
+		(exclude_from_sim no)
+		(at 94.234 73.914 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+		(uuid "fb6d9c48-8427-4830-b5ae-86c52796a35d")
 	)
 	(text_box "Connector"
 		(exclude_from_sim no)
