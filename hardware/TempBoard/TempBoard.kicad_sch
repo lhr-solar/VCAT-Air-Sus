@@ -1572,7 +1572,7 @@
 	)
 	(wire
 		(pts
-			(xy 68.58 52.07) (xy 80.01 52.07)
+			(xy 68.58 52.07) (xy 69.85 52.07)
 		)
 		(stroke
 			(width 0)
@@ -1932,6 +1932,16 @@
 	)
 	(wire
 		(pts
+			(xy 83.82 41.91) (xy 80.01 41.91)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aec217d9-b479-4a15-ac68-1c0eb17d9257")
+	)
+	(wire
+		(pts
 			(xy 157.48 34.29) (xy 157.48 38.1)
 		)
 		(stroke
@@ -1939,6 +1949,16 @@
 			(type default)
 		)
 		(uuid "b23b56a9-1200-4041-829f-29bae760578c")
+	)
+	(wire
+		(pts
+			(xy 83.82 41.91) (xy 83.82 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b714e73f-ac72-4d76-b7b4-204a04a18318")
 	)
 	(wire
 		(pts
@@ -1979,6 +1999,16 @@
 			(type default)
 		)
 		(uuid "e8e26a19-58e4-4bac-a8b8-76932cfceb5a")
+	)
+	(wire
+		(pts
+			(xy 83.82 52.07) (xy 77.47 52.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ea1771f0-9cf9-4f34-95fd-61952b5b3a24")
 	)
 	(wire
 		(pts
@@ -3281,7 +3311,7 @@
 		(uuid "142d52e0-aacc-44b6-a9fb-356aaf5ecba1")
 	)
 	(label "VDDIO_CONN"
-		(at 80.01 52.07 180)
+		(at 80.01 41.91 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -3578,6 +3608,73 @@
 			(project ""
 				(path "/9258ccab-0ef6-442d-b425-b92e09dff747"
 					(reference "J2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 73.66 52.07 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "29f8696b-f691-4d8f-8ca2-825e7f64d239")
+		(property "Reference" "R4"
+			(at 73.406 49.53 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "0"
+			(at 73.66 54.356 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 73.66 53.848 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 73.66 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 73.66 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b6123b50-c7c9-4919-b7a5-22bd36a07d5c")
+		)
+		(pin "2"
+			(uuid "0d19e079-bf55-4219-b11e-115b008ab553")
+		)
+		(instances
+			(project ""
+				(path "/9258ccab-0ef6-442d-b425-b92e09dff747"
+					(reference "R4")
 					(unit 1)
 				)
 			)
