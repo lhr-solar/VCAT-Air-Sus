@@ -51,7 +51,13 @@
           "min_clearance": 0.5
         }
       },
-      "diff_pair_dimensions": [],
+      "diff_pair_dimensions": [
+        {
+          "gap": 0.0,
+          "via_gap": 0.0,
+          "width": 0.0
+        }
+      ],
       "drc_exclusions": [],
       "meta": {
         "version": 2
@@ -180,7 +186,12 @@
           "td_width_to_size_filter_ratio": 0.9
         }
       ],
-      "track_widths": [],
+      "track_widths": [
+        0.0,
+        0.2,
+        0.5,
+        0.7
+      ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
           "corner_radius_percentage": 80,
@@ -207,7 +218,12 @@
           "spacing": 0.6
         }
       },
-      "via_dimensions": [],
+      "via_dimensions": [
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        }
+      ],
       "zones_allow_external_fillets": false
     },
     "ipc2581": {
@@ -478,7 +494,12 @@
     "meta": {
       "version": 4
     },
-    "net_colors": null,
+    "net_colors": {
+      "/SCL": "rgb(38, 57, 255)",
+      "/SCL2": "rgb(227, 40, 255)",
+      "/SDA": "rgb(69, 255, 39)",
+      "/SDA2": "rgb(255, 158, 35)"
+    },
     "netclass_assignments": null,
     "netclass_patterns": []
   },
@@ -535,19 +556,19 @@
           "group_by": true,
           "label": "DNP",
           "name": "${DNP}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
           "label": "Exclude from BOM",
           "name": "${EXCLUDE_FROM_BOM}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
           "label": "Exclude from Board",
           "name": "${EXCLUDE_FROM_BOARD}",
-          "show": true
+          "show": false
         },
         {
           "group_by": true,
@@ -586,10 +607,10 @@
           "show": false
         },
         {
-          "group_by": false,
+          "group_by": true,
           "label": "P/N",
           "name": "P/N",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -638,8 +659,8 @@
       "group_symbols": true,
       "include_excluded_from_bom": true,
       "name": "",
-      "sort_asc": true,
-      "sort_field": "Reference"
+      "sort_asc": false,
+      "sort_field": "P/N"
     },
     "connection_grid_size": 50.0,
     "drawing": {
@@ -685,6 +706,14 @@
     [
       "786cb406-361f-4750-8568-e04e7e4e1389",
       "Root"
+    ],
+    [
+      "7e01b132-153e-489b-a43c-5ace4b81c54b",
+      "LEDs"
+    ],
+    [
+      "179ea17a-7855-408b-b32c-6524117ac3b2",
+      "mx150Connector"
     ]
   ],
   "text_variables": {}
