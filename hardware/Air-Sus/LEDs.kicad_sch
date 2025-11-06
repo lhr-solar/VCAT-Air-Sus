@@ -666,7 +666,7 @@
 	)
 	(text_box "LED\n"
 		(exclude_from_sim no)
-		(at 115.57 62.23 0)
+		(at 116.84 113.03 0)
 		(size 66.04 46.99)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke

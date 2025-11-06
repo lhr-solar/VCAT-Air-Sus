@@ -494,12 +494,7 @@
     "meta": {
       "version": 4
     },
-    "net_colors": {
-      "/SCL": "rgb(38, 57, 255)",
-      "/SCL2": "rgb(227, 40, 255)",
-      "/SDA": "rgb(69, 255, 39)",
-      "/SDA2": "rgb(255, 158, 35)"
-    },
+    "net_colors": null,
     "netclass_assignments": null,
     "netclass_patterns": []
   },

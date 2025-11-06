@@ -7,4 +7,6 @@
   (lib (name "utsvt_misc")(type "KiCad")(uri "${KIPRJMOD}/../../lib/KiCAD-Sharepoint/utsvt_misc.kicad_sym")(options "")(descr ""))
   (lib (name "ABPMRRV060MG2A3")(type "KiCad")(uri "${KIPRJMOD}/../../lib/custom/symbols/ABPMRRV060MG2A3.kicad_sym")(options "")(descr ""))
   (lib (name "MP3V5004DP")(type "KiCad")(uri "${KIPRJMOD}/../../lib/custom/symbols/MP3V5004DP.kicad_sym")(options "")(descr ""))
+  (lib (name "Res_ARRAY")(type "KiCad")(uri "${KIPRJMOD}/../../lib/ResistorArray/YC248-JR-070RL.kicad_sym")(options "")(descr ""))
+  (lib (name "4PinConn")(type "KiCad")(uri "${KIPRJMOD}/../../lib/4pinRes/YC324-JK-070RL.kicad_sym")(options "")(descr ""))
 )
