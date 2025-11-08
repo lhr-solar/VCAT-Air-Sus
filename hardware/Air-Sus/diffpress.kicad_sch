@@ -1462,7 +1462,7 @@
 				)
 			)
 		)
-		(property "Footprint" "footprints:ABPMRRV060MG2A3"
+		(property "Footprint" "Air-Sus Footprints:ABPMRRV060MG2A3"
 			(at 124.46 -25.07 0)
 			(effects
 				(font

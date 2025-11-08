@@ -1,9 +1,0 @@
-Manufacturer=YAGEO
-PartNumber=YC248-JR-070RL
-PartCategory=Resistor Network (16-Pin)
-PackageCategory=Other
-PinCount=16
-Version=1.2
-Released=2024-05-24 14:14:46
-Downloaded=2025-11-04 22:42:15
-3D=Y
