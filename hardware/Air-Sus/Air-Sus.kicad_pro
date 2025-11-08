@@ -709,6 +709,14 @@
     [
       "179ea17a-7855-408b-b32c-6524117ac3b2",
       "mx150Connector"
+    ],
+    [
+      "054c2389-3969-419a-8b0f-b3ce9332a863",
+      "Differential Pressure Sensor1"
+    ],
+    [
+      "9bed020d-92f1-4ac9-aef3-5671ab5343da",
+      "Differential Pressure Sensor2"
     ]
   ],
   "text_variables": {}

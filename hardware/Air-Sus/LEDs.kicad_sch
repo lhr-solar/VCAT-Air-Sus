@@ -666,7 +666,7 @@
 	)
 	(text_box "LED\n"
 		(exclude_from_sim no)
-		(at 116.84 113.03 0)
+		(at 115.57 62.23 0)
 		(size 66.04 46.99)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -756,7 +756,7 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 78.74) (xy 147.32 81.28)
+			(xy 147.32 77.47) (xy 147.32 81.28)
 		)
 		(stroke
 			(width 0)
@@ -796,7 +796,7 @@
 	)
 	(wire
 		(pts
-			(xy 157.48 78.74) (xy 157.48 81.28)
+			(xy 157.48 77.47) (xy 157.48 81.28)
 		)
 		(stroke
 			(width 0)
@@ -816,7 +816,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 78.74) (xy 167.64 81.28)
+			(xy 167.64 77.47) (xy 167.64 81.28)
 		)
 		(stroke
 			(width 0)
@@ -834,71 +834,38 @@
 		)
 		(uuid "f8150223-7852-46cf-853b-0bc7b7ea0acd")
 	)
-	(global_label "diff_status"
+	(hierarchical_label "Diff_Status"
 		(shape input)
-		(at 147.32 78.74 90)
-		(fields_autoplaced yes)
+		(at 147.32 77.47 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "45a37ecb-dfc9-467c-b134-c98acd807f5f")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 147.32 65.7764 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
+		(uuid "2765dc04-b6b0-43aa-8841-7228594714ce")
 	)
-	(global_label "ir_status"
+	(hierarchical_label "Temp_status"
 		(shape input)
-		(at 157.48 78.74 90)
-		(fields_autoplaced yes)
+		(at 167.64 77.47 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "ac6be038-9a04-4680-a012-8c4b1cf6d01c")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 157.48 67.5906 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
+		(uuid "4dbd1b27-33d6-4d9b-b34b-e4394315153e")
 	)
-	(global_label "Temp_status"
+	(hierarchical_label "ir_status"
 		(shape input)
-		(at 167.64 78.74 90)
-		(fields_autoplaced yes)
+		(at 157.48 77.47 90)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left)
 		)
-		(uuid "e89f1ecb-a2db-48db-a014-47374a273f76")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 167.64 64.0831 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-				(hide yes)
-			)
-		)
+		(uuid "b8446d3b-b40e-406d-872c-824c1b2da142")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -955,7 +922,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "C21190"
+		(property "P/N" "CRCW06031K00FKEI "
 			(at 157.48 85.09 0)
 			(effects
 				(font
@@ -1034,7 +1001,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "C21190"
+		(property "P/N" "CRCW06031K00FKEI "
 			(at 135.89 85.09 0)
 			(effects
 				(font
@@ -1396,7 +1363,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "C21190"
+		(property "P/N" "CRCW06031K00FKEI "
 			(at 167.64 85.09 0)
 			(effects
 				(font
@@ -1779,7 +1746,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "C21190"
+		(property "P/N" "CRCW06031K00FKEI "
 			(at 123.19 85.09 0)
 			(effects
 				(font
@@ -1946,7 +1913,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "C21190"
+		(property "P/N" "CRCW06031K00FKEI "
 			(at 147.32 85.09 0)
 			(effects
 				(font
