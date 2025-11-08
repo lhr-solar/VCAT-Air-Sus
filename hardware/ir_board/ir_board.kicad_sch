@@ -2082,7 +2082,7 @@
 	)
 	(text_box "IR Ride Height Sensor\n"
 		(exclude_from_sim no)
-		(at -91.44 0 0)
+		(at 16.51 12.7 0)
 		(size 81.28 68.58)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
@@ -4175,7 +4175,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Connector_Molex:Molex_Nano-Fit_105310-xx06_2x03_P2.50mm_Vertical"
+		(property "Footprint" "Connector_Molex:Molex_Nano-Fit_105314-xx06_2x03_P2.50mm_Horizontal"
 			(at 27.94 109.22 0)
 			(effects
 				(font
