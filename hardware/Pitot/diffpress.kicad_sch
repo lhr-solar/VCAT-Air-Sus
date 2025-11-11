@@ -720,6 +720,12 @@
 		)
 	)
 	(junction
+		(at 90.17 58.42)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3d5b9708-1c91-41a6-b39f-3175af1bc3ca")
+	)
+	(junction
 		(at 101.6 74.93)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -754,6 +760,16 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d58bc454-8be1-43f0-be3d-372cbd2c0e19")
+	)
+	(wire
+		(pts
+			(xy 90.17 58.42) (xy 90.17 62.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0bf60166-4a0c-412e-a2c8-64d3fccda014")
 	)
 	(wire
 		(pts
@@ -867,7 +883,17 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 58.42) (xy 115.57 58.42)
+			(xy 90.17 58.42) (xy 115.57 58.42)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44bf74c7-b788-45cf-9cb8-145fa6c049b6")
+	)
+	(wire
+		(pts
+			(xy 81.28 58.42) (xy 90.17 58.42)
 		)
 		(stroke
 			(width 0)
@@ -894,6 +920,16 @@
 			(type default)
 		)
 		(uuid "8805a25a-1a1d-4509-8621-ca5e30f410ce")
+	)
+	(wire
+		(pts
+			(xy 90.17 69.85) (xy 90.17 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8af7d489-6c87-469d-bf61-8158ca655982")
 	)
 	(wire
 		(pts
@@ -947,7 +983,7 @@
 	)
 	(hierarchical_label "pressureERR"
 		(shape output)
-		(at 96.52 58.42 180)
+		(at 81.28 58.42 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -1207,6 +1243,157 @@
 				)
 				(path "/b92f2323-f48d-45bc-8bf4-2cff87ecc0bc/5b12aa57-1644-4b30-a37a-ee43545972bc"
 					(reference "R11")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 90.17 73.66 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "30f94f50-2bd5-46c0-b1c4-9ad01b689983")
+		(property "Reference" "#PWR030"
+			(at 90.17 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 90.17 77.724 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.17 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 90.17 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 90.17 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b667c4d2-27fc-4146-97ff-6c4eb69eb543")
+		)
+		(instances
+			(project "Pitot"
+				(path "/b92f2323-f48d-45bc-8bf4-2cff87ecc0bc/1905abd7-6f86-4e5e-9f35-1efc7ddf21d8"
+					(reference "#PWR031")
+					(unit 1)
+				)
+				(path "/b92f2323-f48d-45bc-8bf4-2cff87ecc0bc/5b12aa57-1644-4b30-a37a-ee43545972bc"
+					(reference "#PWR030")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 90.17 66.04 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp yes)
+		(uuid "32b65619-4f95-472b-b67b-6adc1a23ab4f")
+		(property "Reference" "R18"
+			(at 92.202 65.2779 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7k"
+			(at 92.202 67.564 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
+			(at 88.392 66.04 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 90.17 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 90.17 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "71-CRCW0603-4.7K-E3"
+			(at 90.17 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ab5098d4-bb7b-42c3-8256-3df5ee40abd1")
+		)
+		(pin "1"
+			(uuid "f48b63db-d85e-44ab-985d-f36bc08036b3")
+		)
+		(instances
+			(project "Pitot"
+				(path "/b92f2323-f48d-45bc-8bf4-2cff87ecc0bc/1905abd7-6f86-4e5e-9f35-1efc7ddf21d8"
+					(reference "R19")
+					(unit 1)
+				)
+				(path "/b92f2323-f48d-45bc-8bf4-2cff87ecc0bc/5b12aa57-1644-4b30-a37a-ee43545972bc"
+					(reference "R18")
 					(unit 1)
 				)
 			)
