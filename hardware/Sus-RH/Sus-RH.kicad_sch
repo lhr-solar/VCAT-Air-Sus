@@ -3522,6 +3522,12 @@
 		(uuid "2b4950a5-e2a4-4574-b4fd-edfbf71e940a")
 	)
 	(junction
+		(at 62.23 27.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2b874909-7961-4af7-82c4-0fa0afe3d310")
+	)
+	(junction
 		(at 105.41 86.36)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3576,16 +3582,40 @@
 		(uuid "a49fe21d-f28b-4955-9908-4d849a1afc30")
 	)
 	(junction
+		(at 24.13 27.94)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ab4c5ea7-141c-4c8f-bfaf-8f2fcc068ec5")
+	)
+	(junction
+		(at 26.67 33.02)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c2663ae4-f30e-45f0-8b84-782864049363")
+	)
+	(junction
 		(at 154.94 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "cda39a81-1790-4999-b397-4a0d8021817f")
 	)
 	(junction
+		(at 54.61 39.37)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d1354c6b-6b18-457a-b262-0adea93b05e2")
+	)
+	(junction
 		(at 105.41 93.98)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d13f7b77-7fd1-409d-894c-2f37ca916f85")
+	)
+	(junction
+		(at 40.64 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "da5e9c99-9a68-4504-b6c8-693480a86e38")
 	)
 	(junction
 		(at 58.42 39.37)
@@ -3781,6 +3811,16 @@
 	)
 	(wire
 		(pts
+			(xy 26.67 33.02) (xy 27.94 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1a2ec7b6-0bb7-4b03-9ed1-335f0e7682c1")
+	)
+	(wire
+		(pts
 			(xy 55.88 33.02) (xy 55.88 27.94)
 		)
 		(stroke
@@ -3851,7 +3891,7 @@
 	)
 	(wire
 		(pts
-			(xy 58.42 27.94) (xy 66.04 27.94)
+			(xy 58.42 27.94) (xy 62.23 27.94)
 		)
 		(stroke
 			(width 0)
@@ -3931,7 +3971,7 @@
 	)
 	(wire
 		(pts
-			(xy 53.34 39.37) (xy 58.42 39.37)
+			(xy 53.34 39.37) (xy 54.61 39.37)
 		)
 		(stroke
 			(width 0)
@@ -4301,6 +4341,16 @@
 	)
 	(wire
 		(pts
+			(xy 26.67 41.91) (xy 26.67 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "634869a0-0261-4cd5-9dd8-18ea624fb621")
+	)
+	(wire
+		(pts
 			(xy 134.62 39.37) (xy 146.05 39.37)
 		)
 		(stroke
@@ -4531,6 +4581,16 @@
 	)
 	(wire
 		(pts
+			(xy 54.61 39.37) (xy 58.42 39.37)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a5300f9-2495-4745-8442-1c8b78432e06")
+	)
+	(wire
+		(pts
 			(xy 105.41 96.52) (xy 105.41 93.98)
 		)
 		(stroke
@@ -4561,7 +4621,7 @@
 	)
 	(wire
 		(pts
-			(xy 19.05 27.94) (xy 27.94 27.94)
+			(xy 19.05 27.94) (xy 24.13 27.94)
 		)
 		(stroke
 			(width 0)
@@ -4701,7 +4761,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 43.18) (xy 40.64 57.15)
+			(xy 40.64 43.18) (xy 40.64 48.26)
 		)
 		(stroke
 			(width 0)
@@ -4728,6 +4788,16 @@
 			(type default)
 		)
 		(uuid "a4925cd6-9405-4e38-a2b3-1568859ea3b0")
+	)
+	(wire
+		(pts
+			(xy 40.64 48.26) (xy 40.64 57.15)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5fea49a-9096-4793-85e4-53de44737ca6")
 	)
 	(wire
 		(pts
@@ -4891,6 +4961,16 @@
 	)
 	(wire
 		(pts
+			(xy 24.13 27.94) (xy 27.94 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5937310-46f8-4f69-b315-1a26f96e3917")
+	)
+	(wire
+		(pts
 			(xy 185.42 128.27) (xy 185.42 130.81)
 		)
 		(stroke
@@ -4931,7 +5011,7 @@
 	)
 	(wire
 		(pts
-			(xy 19.05 33.02) (xy 27.94 33.02)
+			(xy 19.05 33.02) (xy 26.67 33.02)
 		)
 		(stroke
 			(width 0)
@@ -4958,6 +5038,16 @@
 			(type default)
 		)
 		(uuid "d15ba230-649b-454a-b480-065693e2cc12")
+	)
+	(wire
+		(pts
+			(xy 62.23 27.94) (xy 66.04 27.94)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d2c4e856-93b9-44b5-8307-77dcea680ee7")
 	)
 	(wire
 		(pts
@@ -11876,6 +11966,16 @@
 		)
 		(uuid "29ea6d3b-29a3-43c5-be67-420d6825160c")
 	)
+	(label "IR_INTER"
+		(at 273.05 63.5 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "2a0ad5b3-91fd-4366-bb06-4b7db94222d2")
+	)
 	(label "Gen_1"
 		(at 72.39 180.34 0)
 		(effects
@@ -11926,6 +12026,16 @@
 		)
 		(uuid "37c0cac6-573b-422e-883d-1dfc6a60d3a1")
 	)
+	(label "SusConfig"
+		(at 273.05 48.26 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "3bcae45b-d416-4239-a8c6-b39a857fd2c4")
+	)
 	(label "IR_INTER"
 		(at 153.67 78.74 180)
 		(effects
@@ -11945,16 +12055,6 @@
 			(justify left bottom)
 		)
 		(uuid "4351fd9c-8db2-4906-a934-7c00bafcbcd8")
-	)
-	(label "IR_INTER"
-		(at 273.05 48.26 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "456330ea-26a2-41d0-b38e-771104cc3907")
 	)
 	(label "Gen_2"
 		(at 72.39 177.8 0)
@@ -12036,16 +12136,6 @@
 		)
 		(uuid "7b17c7cc-bdfd-4485-ae33-6eeb57910f6f")
 	)
-	(label "SusConfig"
-		(at 273.05 63.5 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "8dec9972-17fa-4be2-af79-f328e38479d7")
-	)
 	(label "SDA"
 		(at 146.05 36.83 180)
 		(effects
@@ -12087,14 +12177,14 @@
 		(uuid "aa7e48b9-52b1-4f2e-a26a-96fbe7ab822f")
 	)
 	(label "RHConfig"
-		(at 273.05 58.42 180)
+		(at 273.05 53.34 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "b4f46147-52d2-4ed5-a1eb-928e94ae2666")
+		(uuid "b4d4b759-74c5-48ff-9e6a-01485ad91a13")
 	)
 	(label "CAN_+"
 		(at 106.68 177.8 180)
@@ -12106,7 +12196,7 @@
 		)
 		(uuid "c04d8914-9608-46e6-9699-b7ee5b1a1917")
 	)
-	(label "Debug1"
+	(label "Debug2"
 		(at 273.05 66.04 180)
 		(effects
 			(font
@@ -12116,7 +12206,7 @@
 		)
 		(uuid "c95ca2f3-7a17-4571-bc99-79c1985d9ce9")
 	)
-	(label "Debug2"
+	(label "Debug1"
 		(at 273.05 68.58 180)
 		(effects
 			(font
@@ -12145,16 +12235,6 @@
 			(justify left bottom)
 		)
 		(uuid "dbf55180-c5e7-4172-a42c-67067d2bbf0e")
-	)
-	(label "RH_STATUS"
-		(at 273.05 55.88 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "de80ab25-d6b5-4f3c-a30c-2cc054f02f32")
 	)
 	(label "linpot_norm"
 		(at 100.33 99.06 180)
@@ -12196,6 +12276,26 @@
 		)
 		(uuid "e415ce42-058a-4d25-b99a-a7a2739deaa0")
 	)
+	(label "LINPOT_STATUS"
+		(at 273.05 55.88 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "e6c3f665-caaa-4113-b189-4f0da9d3abc3")
+	)
+	(label "RH_STATUS"
+		(at 273.05 58.42 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "ed4ea936-a320-4901-a8e2-b06fb977fc0f")
+	)
 	(label "linpot_out"
 		(at 153.67 73.66 180)
 		(effects
@@ -12215,16 +12315,6 @@
 			(justify left bottom)
 		)
 		(uuid "ef439a76-31c1-4c40-af45-20b520f87403")
-	)
-	(label "LINPOT_STATUS"
-		(at 273.05 53.34 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "fc88dfc7-7754-473c-8b65-b1375bcf379f")
 	)
 	(symbol
 		(lib_id "power:+24V")
@@ -12286,6 +12376,72 @@
 			(project "Sus-RH"
 				(path "/5f8d513b-42c2-4d15-b515-d2d66a528ded"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 62.23 27.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "03de57b2-1e11-491a-8245-a53141cc9ed9")
+		(property "Reference" "Vout1"
+			(at 60.1981 21.082 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TP1"
+			(at 59.69 22.86 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 67.31 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 67.31 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 62.23 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a87ffafe-7e32-4a62-8178-42d885ab265e")
+		)
+		(instances
+			(project "Sus-RH"
+				(path "/5f8d513b-42c2-4d15-b515-d2d66a528ded"
+					(reference "Vout1")
 					(unit 1)
 				)
 			)
@@ -12892,6 +13048,72 @@
 			(project ""
 				(path "/5f8d513b-42c2-4d15-b515-d2d66a528ded"
 					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 24.13 27.94 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "204d4225-b60e-4fd6-8cbf-dd607d9edc75")
+		(property "Reference" "Vin"
+			(at 23.114 20.574 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TP1"
+			(at 23.114 23.114 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 29.21 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 29.21 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 24.13 27.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "78cacd31-2577-41f8-bcdb-8275da924d48")
+		)
+		(instances
+			(project ""
+				(path "/5f8d513b-42c2-4d15-b515-d2d66a528ded"
+					(reference "Vin")
 					(unit 1)
 				)
 			)
@@ -13643,6 +13865,72 @@
 			(project "Sus-RH"
 				(path "/5f8d513b-42c2-4d15-b515-d2d66a528ded"
 					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 54.61 39.37 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "484a1277-7bab-4dd6-a364-991f310f436c")
+		(property "Reference" "ADJ1"
+			(at 52.324 42.672 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 53.3401 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 49.53 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 49.53 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 54.61 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "dd1b2b98-f968-447a-88ba-14c9b2a48358")
+		)
+		(instances
+			(project "Sus-RH"
+				(path "/5f8d513b-42c2-4d15-b515-d2d66a528ded"
+					(reference "ADJ1")
 					(unit 1)
 				)
 			)
@@ -14841,6 +15129,72 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 40.64 48.26 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "81326e6f-eb99-4e8c-884f-f4891068d472")
+		(property "Reference" "GNDLDO1"
+			(at 45.72 46.9899 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 45.72 49.5299 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 40.64 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 40.64 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 40.64 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2b726368-3f77-4bbf-a591-fa36ade074cb")
+		)
+		(instances
+			(project "Sus-RH"
+				(path "/5f8d513b-42c2-4d15-b515-d2d66a528ded"
+					(reference "GNDLDO1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 168.91 71.12 0)
 		(unit 1)
@@ -14936,7 +15290,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
+		(property "Value" "GNDA"
 			(at 105.156 100.33 0)
 			(effects
 				(font
@@ -16094,6 +16448,72 @@
 			(project ""
 				(path "/5f8d513b-42c2-4d15-b515-d2d66a528ded"
 					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 26.67 41.91 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bfc795a9-babe-4f06-93a5-ca01f42856da")
+		(property "Reference" "EN1"
+			(at 25.4 47.752 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 25.4 50.292 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+			(at 21.59 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 21.59 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 26.67 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6f11e00a-0139-415f-9247-5eb443df1a49")
+		)
+		(instances
+			(project "Sus-RH"
+				(path "/5f8d513b-42c2-4d15-b515-d2d66a528ded"
+					(reference "EN1")
 					(unit 1)
 				)
 			)
@@ -17321,7 +17741,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GNDA"
+		(property "Value" "GND"
 			(at 60.96 184.404 0)
 			(effects
 				(font
