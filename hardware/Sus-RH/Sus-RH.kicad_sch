@@ -12675,7 +12675,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "VDDA"
+		(property "Value" "+3.3V"
 			(at 60.96 166.37 0)
 			(effects
 				(font
@@ -13291,7 +13291,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
+		(property "Value" "VDDA"
 			(at 105.41 79.756 0)
 			(effects
 				(font
