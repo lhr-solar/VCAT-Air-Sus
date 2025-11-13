@@ -1114,7 +1114,7 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3VMCU"
+		(property "Value" "+3.3V"
 			(at 101.6 60.452 0)
 			(effects
 				(font
