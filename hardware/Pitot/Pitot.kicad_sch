@@ -3048,20 +3048,20 @@
 		(uuid "e6aee060-9b36-4a49-9da7-2d3b95a6a979")
 	)
 	(no_connect
-		(at 266.7 77.47)
-		(uuid "0b04de2a-6176-4287-9b1e-fa86633442f6")
-	)
-	(no_connect
 		(at 266.7 30.48)
 		(uuid "1d353d10-1cfa-4ac3-a533-afbe65f403a8")
 	)
 	(no_connect
-		(at 266.7 80.01)
-		(uuid "55428f57-a2d8-4adb-9fd3-d886750a5896")
-	)
-	(no_connect
 		(at 266.7 74.93)
 		(uuid "7b3f6835-c57a-41ec-bf83-9f2ef8a36e7e")
+	)
+	(no_connect
+		(at 266.7 72.39)
+		(uuid "9de0f328-aaad-4e9e-b20e-b961d16fc9a8")
+	)
+	(no_connect
+		(at 266.7 80.01)
+		(uuid "b104b454-4311-4a69-85e4-0c4e17bbf68a")
 	)
 	(wire
 		(pts
@@ -3385,16 +3385,6 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 72.39) (xy 278.13 72.39)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "25559371-1005-4e80-a88c-5983d4bf18cc")
-	)
-	(wire
-		(pts
 			(xy 115.57 104.14) (xy 127 104.14)
 		)
 		(stroke
@@ -3625,16 +3615,6 @@
 	)
 	(wire
 		(pts
-			(xy 266.7 60.96) (xy 278.13 60.96)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4ca616db-dc1b-4143-baef-374428787006")
-	)
-	(wire
-		(pts
 			(xy 119.38 92.71) (xy 127 92.71)
 		)
 		(stroke
@@ -3662,6 +3642,16 @@
 			(type default)
 		)
 		(uuid "52e9bfc1-5143-4ef5-93c2-ae5d4c75f645")
+	)
+	(wire
+		(pts
+			(xy 266.7 66.04) (xy 278.13 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "52fb7513-9ba4-49e1-bcd2-a88591b6ac13")
 	)
 	(wire
 		(pts
@@ -3825,6 +3815,16 @@
 	)
 	(wire
 		(pts
+			(xy 266.7 60.96) (xy 278.13 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "68d300cf-9335-4375-82a2-66e2fc8f652a")
+	)
+	(wire
+		(pts
 			(xy 134.62 55.88) (xy 142.24 55.88)
 		)
 		(stroke
@@ -3902,16 +3902,6 @@
 			(type default)
 		)
 		(uuid "80c5e85f-4201-4bef-acce-f1344d1982a7")
-	)
-	(wire
-		(pts
-			(xy 266.7 66.04) (xy 278.13 66.04)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "819459ed-ffcf-465a-b56a-b3b23cb0b6f0")
 	)
 	(wire
 		(pts
@@ -4522,6 +4512,16 @@
 			(type default)
 		)
 		(uuid "df3e15b4-bef2-4080-8aa7-37dab3738b1f")
+	)
+	(wire
+		(pts
+			(xy 266.7 77.47) (xy 278.13 77.47)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1ac943e-b1f6-4057-a212-2b0ef18c8505")
 	)
 	(wire
 		(pts
@@ -8447,16 +8447,6 @@
 			"YERRB0AABEAABEAABEAABEAABEAABPxK4P8BeJuhAJs01lsAAAAASUVORK5CYII="
 		)
 	)
-	(label "Debug2"
-		(at 278.13 72.39 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "067d12ef-bdd6-4b52-8133-75945c1ab8f0")
-	)
 	(label "SCL1"
 		(at 115.57 104.14 0)
 		(effects
@@ -8478,6 +8468,16 @@
 		(uuid "0c0ee742-3088-4230-bc19-4641eaa1005f")
 	)
 	(label "pressERR_2"
+		(at 278.13 66.04 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "1adf1c64-1c57-4fa7-9782-97b77281f168")
+	)
+	(label "temp_stat"
 		(at 278.13 48.26 180)
 		(effects
 			(font
@@ -8485,7 +8485,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "1b71a22a-37c3-455f-bbbe-51d7532f98ce")
+		(uuid "1d682980-d548-4135-b777-1115c516ec41")
 	)
 	(label "SDA2"
 		(at 27.94 90.17 0)
@@ -8527,16 +8527,6 @@
 		)
 		(uuid "30d50488-072d-406a-b945-b95afaa07ec8")
 	)
-	(label "pressERR_1"
-		(at 278.13 45.72 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "353718ef-25a9-4cd0-b328-7b6fc0dc74a4")
-	)
 	(label "SCL2"
 		(at 62.23 60.96 180)
 		(effects
@@ -8546,16 +8536,6 @@
 			(justify right bottom)
 		)
 		(uuid "36c5385d-4ade-4dc5-8287-a3f87e8cd4fe")
-	)
-	(label "Debug1"
-		(at 278.13 66.04 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "3a9acfb1-91ce-49c5-8d64-ecd1e15eead3")
 	)
 	(label "Debug1"
 		(at 21.59 176.53 0)
@@ -8627,6 +8607,16 @@
 		)
 		(uuid "5395ae33-de15-4b51-aacc-868d14660b45")
 	)
+	(label "diff_stat"
+		(at 278.13 45.72 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "592d3d3c-05b7-486a-82d6-3a21f30dd320")
+	)
 	(label "pressERR_1"
 		(at 68.58 29.21 180)
 		(effects
@@ -8646,16 +8636,6 @@
 			(justify left bottom)
 		)
 		(uuid "5f5d2374-8788-4d5b-839a-3b38837f190f")
-	)
-	(label "P1_LED"
-		(at 278.13 55.88 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "66081c40-e604-42ae-a5ab-25e0e3728d38")
 	)
 	(label "CAN_-"
 		(at 185.42 132.08 0)
@@ -8686,6 +8666,16 @@
 			(justify right bottom)
 		)
 		(uuid "6cc6b83f-45bf-48df-bbae-550432f02a3b")
+	)
+	(label "Debug2"
+		(at 278.13 50.8 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "6f714c72-4c10-4f87-b34f-2f7a06006abc")
 	)
 	(label "Debug2"
 		(at 21.59 186.69 0)
@@ -8777,7 +8767,7 @@
 		)
 		(uuid "a98ce4dc-adf2-4b8c-b6ee-b7c607dab8fe")
 	)
-	(label "P2_LED"
+	(label "pressERR_1"
 		(at 278.13 60.96 180)
 		(effects
 			(font
@@ -8785,7 +8775,7 @@
 			)
 			(justify right bottom)
 		)
-		(uuid "abd37b33-083c-41ee-9c12-e04c63248dbe")
+		(uuid "ad4d2143-08c9-442b-ba82-bb34d8844ede")
 	)
 	(label "P2_LED"
 		(at 35.56 138.43 180)
@@ -8827,15 +8817,15 @@
 		)
 		(uuid "b955c821-71fa-4ed6-8eb2-f501ab7d3223")
 	)
-	(label "diff_stat"
-		(at 278.13 50.8 180)
+	(label "Debug1"
+		(at 278.13 53.34 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "ba586529-b173-4dca-b986-583a52dede82")
+		(uuid "bc089ff3-b2ed-4604-8a73-ba13f2500ff2")
 	)
 	(label "P1_LED"
 		(at 25.4 138.43 180)
@@ -8867,15 +8857,15 @@
 		)
 		(uuid "cebc54fb-66b9-4ff9-82c5-e2d0b70db47d")
 	)
-	(label "temp_stat"
-		(at 278.13 53.34 180)
+	(label "P1_LED"
+		(at 278.13 55.88 180)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify right bottom)
 		)
-		(uuid "dc882ca7-ad65-4f91-85dc-b4ffb40a4ddf")
+		(uuid "db22b3db-8f46-4fa4-b368-b771d75b30af")
 	)
 	(label "SDA1"
 		(at 165.1 104.14 180)
@@ -8946,6 +8936,16 @@
 			(justify left bottom)
 		)
 		(uuid "f15b9f23-7214-4349-8db7-bf1b80d15cf0")
+	)
+	(label "P2_LED"
+		(at 278.13 77.47 180)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right bottom)
+		)
+		(uuid "f4098b8e-d1ee-42c1-a1d2-537076f1f15e")
 	)
 	(label "Gen_2"
 		(at 154.94 129.54 0)
