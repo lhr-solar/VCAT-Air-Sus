@@ -1068,7 +1068,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "71-CRCW0603-4.7K-E3"
+		(property "P/N" "CRCW06034K70FKEA"
 			(at 115.57 53.34 0)
 			(effects
 				(font
@@ -1220,7 +1220,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "71-CRCW0603-4.7K-E3"
+		(property "P/N" "CRCW06034K70FKEA"
 			(at 166.37 62.23 0)
 			(effects
 				(font
@@ -1371,7 +1371,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "71-CRCW0603-4.7K-E3"
+		(property "P/N" "CRCW06034K70FKEA"
 			(at 90.17 66.04 0)
 			(effects
 				(font
@@ -1605,7 +1605,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "71-CRCW0603-4.7K-E3"
+		(property "P/N" "CRCW06034K70FKEA"
 			(at 156.21 62.23 0)
 			(effects
 				(font
@@ -1738,7 +1738,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "785-ABPMRRV060MG2A3"
+		(property "P/N" "ABPMRRV060MG2A3"
 			(at 151.13 69.85 0)
 			(effects
 				(font

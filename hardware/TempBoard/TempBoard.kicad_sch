@@ -4225,7 +4225,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "828-1063-6-ND"
+		(property "P/N" "BME280"
 			(at 53.34 59.69 0)
 			(effects
 				(font
@@ -4543,7 +4543,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "538-105309-1304"
+		(property "P/N" "105313-1104"
 			(at 132.08 31.75 0)
 			(effects
 				(font

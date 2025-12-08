@@ -12771,7 +12771,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "603-YC324-JK-070RL"
+		(property "P/N" "YC324-JK-070RL"
 			(at 36.83 172.72 0)
 			(effects
 				(font
@@ -13011,7 +13011,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "595-TLV9002QDRQ1"
+		(property "P/N" "TLV9002QDRQ1"
 			(at 34.29 91.44 0)
 			(effects
 				(font
@@ -13763,7 +13763,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "603-YC324-JK-070RL"
+		(property "P/N" "YC324-JK-070RL"
 			(at 78.74 172.72 0)
 			(effects
 				(font
@@ -15390,7 +15390,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "511-LDO40LPU33RY"
+		(property "P/N" "LDO40LPURY"
 			(at 40.64 33.02 0)
 			(effects
 				(font
@@ -15700,7 +15700,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "538-105310-1106"
+		(property "P/N" "105314-1106 "
 			(at 129.54 36.83 0)
 			(effects
 				(font
@@ -16085,7 +16085,7 @@
 				(hide yes)
 			)
 		)
-		(property "P/N" "534-3568"
+		(property "P/N" "3568"
 			(at 71.12 27.94 90)
 			(effects
 				(font
