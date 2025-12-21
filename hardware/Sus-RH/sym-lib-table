@@ -9,4 +9,5 @@
   (lib (name "ABPMRRV060MG2A3")(type "KiCad")(uri "${KIPRJMOD}/../../lib/custom/symbols/ABPMRRV060MG2A3.kicad_sym")(options "")(descr ""))
   (lib (name "MP3V5004DP")(type "KiCad")(uri "${KIPRJMOD}/../../lib/custom/symbols/MP3V5004DP.kicad_sym")(options "")(descr ""))
   (lib (name "TLV9002QDRQ1")(type "KiCad")(uri "${KIPRJMOD}/../../lib/TLV9002QDRQ1/TLV9002QDRQ1.kicad_sym")(options "")(descr ""))
+  (lib (name "NCP718ASN330T1G")(type "KiCad")(uri "/Users/karthikkurapati/Documents/LHR-Today/VCAT-Air-Sus/lib/NCP718ASN330T1G/NCP718ASN330T1G/NCP718ASN330T1G.kicad_sym")(options "")(descr ""))
 )
