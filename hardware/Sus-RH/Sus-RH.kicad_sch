@@ -18341,7 +18341,7 @@
 			(color 0 0 0 0.0000)
 		)
 		(uuid "83a92fd4-df83-499b-ad91-0ed5d7cc7b25")
-		(property "Sheetname" "Unity Opamp + Non-inverting Opamp"
+		(property "Sheetname" "Unity Opamp + Adj Opamp"
 			(at 29.21 22.1484 0)
 			(effects
 				(font
