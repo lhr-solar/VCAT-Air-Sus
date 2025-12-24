@@ -370,6 +370,142 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Device:Fuse"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "F"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Fuse"
+				(at -1.905 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Fuse"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "fuse"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "*Fuse*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "Fuse_0_1"
+				(rectangle
+					(start -0.762 -2.54)
+					(end 0.762 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "Fuse_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Device:LED"
 			(pin_numbers
 				(hide yes)
@@ -1355,7 +1491,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "utsvt_connectors:MX150_02x06_Vertical"
+		(symbol "utsvt_connectors:MX150_02x06_RightAngle"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1367,15 +1503,15 @@
 					)
 				)
 			)
-			(property "Value" "MX150_02x06_Vertical"
-				(at 0 -1.778 0)
+			(property "Value" "MX150_02x06_RightAngle"
+				(at 0 -2.032 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
 				)
 			)
-			(property "Footprint" "UTSVT_Connectors:MX150_02x06_Vertical"
+			(property "Footprint" "UTSVT_Connectors:MX150_02x06_RightAngle"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1384,7 +1520,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "https://www.molex.com/en-us/products/part-detail/757575461?display=pdf"
+			(property "Datasheet" "https://www.molex.com/en-us/products/part-detail/759001161?display=pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1402,7 +1538,7 @@
 					(hide yes)
 				)
 			)
-			(property "P/N" "757575461"
+			(property "P/N" "759001161"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1411,7 +1547,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "MX150_02x06_Vertical_1_1"
+			(symbol "MX150_02x06_RightAngle_1_1"
 				(rectangle
 					(start -11.43 -3.81)
 					(end 11.43 -27.94)
@@ -2565,7 +2701,7 @@
 	)
 	(wire
 		(pts
-			(xy 262.89 27.94) (xy 262.89 33.02)
+			(xy 270.51 27.94) (xy 270.51 33.02)
 		)
 		(stroke
 			(width 0)
@@ -2905,6 +3041,16 @@
 	)
 	(wire
 		(pts
+			(xy 257.81 29.21) (xy 259.08 29.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f3a967a-4eb1-493d-bc09-866210dc715c")
+	)
+	(wire
+		(pts
 			(xy 30.48 66.04) (xy 38.1 66.04)
 		)
 		(stroke
@@ -3002,16 +3148,6 @@
 			(type default)
 		)
 		(uuid "63b276f7-2590-478e-8997-fecded378951")
-	)
-	(wire
-		(pts
-			(xy 257.81 33.02) (xy 262.89 33.02)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "64378635-cc0f-4bf0-9eb1-18589225df3d")
 	)
 	(wire
 		(pts
@@ -3142,6 +3278,16 @@
 			(type default)
 		)
 		(uuid "81a4755e-b9f6-4b3e-8201-a667b9fd3d6d")
+	)
+	(wire
+		(pts
+			(xy 257.81 33.02) (xy 270.51 33.02)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "83019a91-a9a8-499b-8553-6122f5b7b857")
 	)
 	(wire
 		(pts
@@ -3335,16 +3481,6 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 29.21) (xy 257.81 29.21)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a44d96a3-34c5-4537-a775-6b4b01778eaa")
-	)
-	(wire
-		(pts
 			(xy 64.77 123.19) (xy 72.39 123.19)
 		)
 		(stroke
@@ -3395,7 +3531,7 @@
 	)
 	(wire
 		(pts
-			(xy 259.08 24.13) (xy 259.08 29.21)
+			(xy 266.7 22.86) (xy 266.7 29.21)
 		)
 		(stroke
 			(width 0)
@@ -3705,7 +3841,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 68.58) (xy 30.48 68.58)
+			(xy 41.91 68.58) (xy 30.48 68.58)
 		)
 		(stroke
 			(width 0)
@@ -13844,7 +13980,7 @@
 		)
 		(uuid "6226183e-d624-46c2-b2b2-380f3ec90990")
 	)
-	(label "linpot_norm"
+	(label "linpot_adj"
 		(at 41.91 71.12 180)
 		(effects
 			(font
@@ -14034,8 +14170,8 @@
 		)
 		(uuid "ed4ea936-a320-4901-a8e2-b06fb977fc0f")
 	)
-	(label "linpot_out"
-		(at 40.64 68.58 180)
+	(label "linpot_in"
+		(at 41.91 68.58 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -14056,7 +14192,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 259.08 24.13 0)
+		(at 266.7 22.86 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14064,7 +14200,7 @@
 		(dnp no)
 		(uuid "0ddf5523-95ef-4555-8cc0-89dcd14badd9")
 		(property "Reference" "#PWR025"
-			(at 259.08 27.94 0)
+			(at 266.7 26.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14073,7 +14209,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 259.08 20.574 0)
+			(at 266.7 19.304 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14081,7 +14217,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 259.08 24.13 0)
+			(at 266.7 22.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14090,7 +14226,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 259.08 24.13 0)
+			(at 266.7 22.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14099,7 +14235,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 259.08 24.13 0)
+			(at 266.7 22.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14585,7 +14721,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 113.03 108.458 90)
 			(effects
 				(font
@@ -14740,7 +14876,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 161.29 105.918 90)
 			(effects
 				(font
@@ -14807,7 +14943,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 161.29 121.158 90)
 			(effects
 				(font
@@ -14874,7 +15010,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 113.03 118.618 90)
 			(effects
 				(font
@@ -14976,6 +15112,74 @@
 			(project "Sus-RH"
 				(path "/5f8d513b-42c2-4d15-b515-d2d66a528ded"
 					(reference "#PWR06")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Fuse")
+		(at 262.89 29.21 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "4945c722-76e2-4f7b-b9d9-d05aa0ab8f32")
+		(property "Reference" "F1"
+			(at 262.89 22.86 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "500mA"
+			(at 262.89 25.4 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Fuse:Fuseholder_Blade_Mini_Keystone_3568"
+			(at 262.89 30.988 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 262.89 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Fuse"
+			(at 262.89 29.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b81f2710-714d-428f-ac94-d0cc92107549")
+		)
+		(pin "2"
+			(uuid "4d66d6c3-f4e9-45c4-bb04-e829f677aea1")
+		)
+		(instances
+			(project ""
+				(path "/5f8d513b-42c2-4d15-b515-d2d66a528ded"
+					(reference "F1")
 					(unit 1)
 				)
 			)
@@ -15517,113 +15721,6 @@
 		)
 	)
 	(symbol
-		(lib_id "utsvt_connectors:MX150_02x06_Vertical")
-		(at 138.43 60.96 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "74632861-21d6-4e5b-a2d7-d1a38c362e7e")
-		(property "Reference" "J1"
-			(at 138.43 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "MX150_02x06_Vertical"
-			(at 138.43 62.23 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "UTSVT_Connectors:MX150_02x06_Vertical"
-			(at 138.43 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.molex.com/en-us/products/part-detail/757575461?display=pdf"
-			(at 138.43 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 138.43 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "P/N" "757575461"
-			(at 138.43 60.96 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e6649fb3-3710-45a6-a6fe-87c5d5c7fb68")
-		)
-		(pin "2"
-			(uuid "ff9aa963-d2ea-43a4-9064-ef37473dbda8")
-		)
-		(pin "3"
-			(uuid "3ab6259c-45c6-4f41-8f48-066253ad0ef8")
-		)
-		(pin "4"
-			(uuid "c238f2ea-5816-48bf-9209-797d0c4dacde")
-		)
-		(pin "5"
-			(uuid "da584774-119c-4bd7-9142-5e291155373f")
-		)
-		(pin "6"
-			(uuid "d7aaa2ad-80b5-4a81-9da9-03c75b6b07e0")
-		)
-		(pin "7"
-			(uuid "d70472cb-43dc-489a-a6f7-bebb7aecb033")
-		)
-		(pin "8"
-			(uuid "ee83fcf0-55c1-48b8-a4b2-0144ffa560ae")
-		)
-		(pin "9"
-			(uuid "c2f65914-6984-46fe-8cfb-d0b8d047cfa3")
-		)
-		(pin "10"
-			(uuid "66efdae2-de62-46e7-9d9d-22e7537a270c")
-		)
-		(pin "11"
-			(uuid "2fd6b543-1bdc-4ead-aaa3-5b13c7a29f59")
-		)
-		(pin "12"
-			(uuid "68451754-49c0-42be-ab5f-92085a3d9542")
-		)
-		(instances
-			(project ""
-				(path "/5f8d513b-42c2-4d15-b515-d2d66a528ded"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 27.94 111.76 0)
 		(unit 1)
@@ -16126,7 +16223,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 161.29 110.998 90)
 			(effects
 				(font
@@ -16425,7 +16522,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 113.03 113.538 90)
 			(effects
 				(font
@@ -16723,6 +16820,113 @@
 			(project ""
 				(path "/5f8d513b-42c2-4d15-b515-d2d66a528ded"
 					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "utsvt_connectors:MX150_02x06_RightAngle")
+		(at 138.43 60.96 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "b9b0ed14-a741-4bc2-afa9-d80af0ad876c")
+		(property "Reference" "J3"
+			(at 138.43 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MX150_02x06_RightAngle"
+			(at 138.43 62.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "UTSVT_Connectors:MX150_02x06_RightAngle"
+			(at 138.43 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.molex.com/en-us/products/part-detail/759001161?display=pdf"
+			(at 138.43 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 138.43 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "P/N" "759001161"
+			(at 138.43 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "4"
+			(uuid "3912418b-f1e7-4a83-a1d0-b559c74dddc4")
+		)
+		(pin "5"
+			(uuid "a5b63975-22bc-4e7e-ab39-0f8c15873d71")
+		)
+		(pin "6"
+			(uuid "d6b1eb7d-267f-47b5-9cf7-8d9a38d879d4")
+		)
+		(pin "7"
+			(uuid "28e1b908-bd2b-4df1-941f-55b431ce93f7")
+		)
+		(pin "8"
+			(uuid "4d62c4a6-2f0a-4331-b536-30108bb7c55d")
+		)
+		(pin "9"
+			(uuid "0c2dfab0-c050-4045-9b37-b6b1bfbd0db1")
+		)
+		(pin "10"
+			(uuid "75c0589e-46df-462e-8d81-bd731b37dd93")
+		)
+		(pin "11"
+			(uuid "e2144a3a-622a-4559-b48c-192b175f0047")
+		)
+		(pin "12"
+			(uuid "add118fe-fbcb-4913-9fbd-22dea0f4a89a")
+		)
+		(pin "1"
+			(uuid "fbb37171-8729-4151-999a-e57da33fe9fc")
+		)
+		(pin "2"
+			(uuid "fecd3220-6299-407e-9358-4e79434a56d5")
+		)
+		(pin "3"
+			(uuid "b7210102-0c59-493c-bd55-43dcd972dd43")
+		)
+		(instances
+			(project ""
+				(path "/5f8d513b-42c2-4d15-b515-d2d66a528ded"
+					(reference "J3")
 					(unit 1)
 				)
 			)
@@ -17532,7 +17736,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 161.29 116.078 90)
 			(effects
 				(font
@@ -17599,7 +17803,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 113.03 123.698 90)
 			(effects
 				(font
@@ -17928,7 +18132,7 @@
 	)
 	(symbol
 		(lib_id "power:VDDA")
-		(at 262.89 27.94 0)
+		(at 270.51 27.94 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17936,7 +18140,7 @@
 		(dnp no)
 		(uuid "f7c4b3b8-119d-4b2f-90f5-2d2378667b38")
 		(property "Reference" "#PWR017"
-			(at 262.89 31.75 0)
+			(at 270.51 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17945,7 +18149,7 @@
 			)
 		)
 		(property "Value" "VDDA"
-			(at 262.89 24.13 0)
+			(at 270.51 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17953,7 +18157,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 262.89 27.94 0)
+			(at 270.51 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17962,7 +18166,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 262.89 27.94 0)
+			(at 270.51 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17971,7 +18175,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VDDA\""
-			(at 262.89 27.94 0)
+			(at 270.51 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18155,16 +18359,6 @@
 				(justify left top)
 			)
 		)
-		(pin "linpot_adj_out" output
-			(at 71.12 30.48 0)
-			(uuid "dd5e46c7-78bb-4fe3-a543-675cae074e54")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
 		(pin "linpot_input" input
 			(at 29.21 29.21 180)
 			(uuid "2245eab1-60a2-48e4-8e96-06fec05bbe79")
@@ -18178,6 +18372,16 @@
 		(pin "linpot_out" bidirectional
 			(at 71.12 35.56 0)
 			(uuid "4653ea0b-0002-4f61-a9a9-e6597795d6f8")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(pin "linpot_adj" output
+			(at 71.12 30.48 0)
+			(uuid "6e04e691-fc5c-4fac-a6d4-b1b88ee527cc")
 			(effects
 				(font
 					(size 1.27 1.27)

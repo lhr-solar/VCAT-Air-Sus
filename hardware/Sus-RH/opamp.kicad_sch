@@ -47393,28 +47393,28 @@
 			)
 		)
 		(pin "3"
-			(uuid "3bb5e016-d34d-404f-9ee2-73e45c1a7011")
+			(uuid "3bb5e016-d34d-404f-9ee2-73e45c1a7012")
 		)
 		(pin "2"
-			(uuid "3b049866-b653-41a3-ada1-584cf3ef4e1d")
+			(uuid "3b049866-b653-41a3-ada1-584cf3ef4e1e")
 		)
 		(pin "1"
-			(uuid "6b222593-d4f1-44e9-b35f-21a1543e0724")
+			(uuid "6b222593-d4f1-44e9-b35f-21a1543e0725")
 		)
 		(pin "5"
-			(uuid "c14d6226-7a21-4399-8705-91a5887c341d")
+			(uuid "c14d6226-7a21-4399-8705-91a5887c341e")
 		)
 		(pin "6"
-			(uuid "f187214b-80d2-4530-ba2a-d4b6d27679eb")
+			(uuid "f187214b-80d2-4530-ba2a-d4b6d27679ec")
 		)
 		(pin "7"
-			(uuid "155a9088-655a-4ffb-bc80-846b9b32b57c")
+			(uuid "155a9088-655a-4ffb-bc80-846b9b32b57d")
 		)
 		(pin "8"
-			(uuid "187fc5a3-a6c4-4453-9336-fbd3f3db74e2")
+			(uuid "187fc5a3-a6c4-4453-9336-fbd3f3db74e3")
 		)
 		(pin "4"
-			(uuid "58334382-523c-42df-9be6-bba8f2bf4565")
+			(uuid "58334382-523c-42df-9be6-bba8f2bf4566")
 		)
 		(instances
 			(project ""
@@ -47580,28 +47580,28 @@
 			)
 		)
 		(pin "3"
-			(uuid "3bb5e016-d34d-404f-9ee2-73e45c1a7011")
+			(uuid "3bb5e016-d34d-404f-9ee2-73e45c1a7013")
 		)
 		(pin "2"
-			(uuid "3b049866-b653-41a3-ada1-584cf3ef4e1d")
+			(uuid "3b049866-b653-41a3-ada1-584cf3ef4e1f")
 		)
 		(pin "1"
-			(uuid "6b222593-d4f1-44e9-b35f-21a1543e0724")
+			(uuid "6b222593-d4f1-44e9-b35f-21a1543e0726")
 		)
 		(pin "5"
-			(uuid "c14d6226-7a21-4399-8705-91a5887c341d")
+			(uuid "c14d6226-7a21-4399-8705-91a5887c341f")
 		)
 		(pin "6"
-			(uuid "f187214b-80d2-4530-ba2a-d4b6d27679eb")
+			(uuid "f187214b-80d2-4530-ba2a-d4b6d27679ed")
 		)
 		(pin "7"
-			(uuid "155a9088-655a-4ffb-bc80-846b9b32b57c")
+			(uuid "155a9088-655a-4ffb-bc80-846b9b32b57e")
 		)
 		(pin "8"
-			(uuid "187fc5a3-a6c4-4453-9336-fbd3f3db74e2")
+			(uuid "187fc5a3-a6c4-4453-9336-fbd3f3db74e4")
 		)
 		(pin "4"
-			(uuid "58334382-523c-42df-9be6-bba8f2bf4565")
+			(uuid "58334382-523c-42df-9be6-bba8f2bf4567")
 		)
 		(instances
 			(project ""
@@ -47637,7 +47637,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 120.65 66.548 90)
 			(effects
 				(font
@@ -47772,7 +47772,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
 			(at 102.362 69.85 90)
 			(effects
 				(font
