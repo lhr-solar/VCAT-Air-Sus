@@ -19290,15 +19290,15 @@
 			(uuid "fc4ad486-38ce-4148-b945-c8be980f7de9")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Connector_Molex.3dshapes/Molex_Nano-Fit_105313-xx05_1x05_P2.50mm_Horizontal.step"
+		(model "${KIPRJMOD}/../../lib/STP Files/01x05connNanofit.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 6 -5 1.5)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -90)
 			)
 		)
 	)
@@ -19826,15 +19826,15 @@
 			(uuid "317c4d3b-076e-438f-bca9-2a93a0c946b5")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Connector_Molex.3dshapes/Molex_Nano-Fit_105313-xx05_1x05_P2.50mm_Horizontal.step"
+		(model "${KIPRJMOD}/../../lib/STP Files/01x05connNanofit.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 6 -5 1.5)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -90)
 			)
 		)
 	)
@@ -21231,15 +21231,15 @@
 			(uuid "7ce9e60e-0e73-461a-b0f1-5d0c2f2f42de")
 		)
 		(embedded_fonts no)
-		(model "${KICAD9_3DMODEL_DIR}/Connector_Molex.3dshapes/Molex_Nano-Fit_105313-xx05_1x05_P2.50mm_Horizontal.step"
+		(model "${KIPRJMOD}/../../lib/STP Files/01x05connNanofit.stp"
 			(offset
-				(xyz 0 0 0)
+				(xyz 6 -5 1.5)
 			)
 			(scale
 				(xyz 1 1 1)
 			)
 			(rotate
-				(xyz 0 0 0)
+				(xyz -90 -0 -90)
 			)
 		)
 	)
