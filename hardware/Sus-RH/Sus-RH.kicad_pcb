@@ -636,6 +636,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C207015"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "95649560-f91d-4ede-8d8b-807f45306db2")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "*Fuse*")
 		(path "/4945c722-76e2-4f7b-b9d9-d05aa0ab8f32")
 		(sheetname "/")
@@ -917,7 +929,7 @@
 		(path "/83a92fd4-df83-499b-ad91-0ed5d7cc7b25/538cce14-7ad8-4cff-9d41-48df45aefd1b")
 		(sheetname "/Unity Opamp + Adj Opamp/")
 		(sheetfile "opamp.kicad_sch")
-		(attr smd)
+		(attr smd exclude_from_pos_files)
 		(fp_line
 			(start -0.254724 -0.5225)
 			(end 0.254724 -0.5225)
@@ -1204,6 +1216,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C21190"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "11a3d457-4216-4ccf-b6f5-6f2037a37ec9")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/6f230e00-9cb7-47cd-a22e-6daf5ea9fb25")
 		(sheetname "/")
@@ -1485,7 +1509,7 @@
 		(path "/83a92fd4-df83-499b-ad91-0ed5d7cc7b25/28a36124-58c8-4ff1-931f-97fcb169f69a")
 		(sheetname "/Unity Opamp + Adj Opamp/")
 		(sheetfile "opamp.kicad_sch")
-		(attr smd dnp)
+		(attr smd exclude_from_pos_files dnp)
 		(fp_line
 			(start -0.254724 -0.5225)
 			(end 0.254724 -0.5225)
@@ -2287,7 +2311,7 @@
 				)
 			)
 		)
-		(property "JLC P/N" "C2860922"
+		(property "JLC P/N" "C22392181"
 			(at 0 0 180)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -3469,6 +3493,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C21190"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "1dbcccb7-1bdd-4598-be73-e5b990f8c304")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/7c022888-f6fe-44c1-b7d1-c5ca4c9b8b0d")
 		(sheetname "/")
@@ -3769,6 +3805,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C7371904"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "31e6383b-34fc-4b9d-bcae-f22d55be5305")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -4081,6 +4129,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C21189"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "bb0390cd-5805-46cb-b502-8ff8bfebdb2d")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -5517,7 +5577,7 @@
 		(path "/bfb0faab-9e7a-421d-85fb-97cf5c77bb4c")
 		(sheetname "/")
 		(sheetfile "Sus-RH.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -1.38 -1.38)
 			(end 0 -1.38)
@@ -5897,6 +5957,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C14663"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "bc3fa369-14e4-41b8-a8f1-a9f3d48a2a30")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -6517,6 +6589,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C21189"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "54d1d971-ffca-4074-8170-ec1bbb00f43b")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/3a529bd1-11ce-462a-b7d9-8a72d24a8a8d")
 		(sheetname "/")
@@ -6798,7 +6882,7 @@
 		(path "/83a92fd4-df83-499b-ad91-0ed5d7cc7b25/de4f5cbe-fb9f-49ba-bbb6-4e836a579cbe")
 		(sheetname "/Unity Opamp + Adj Opamp/")
 		(sheetfile "opamp.kicad_sch")
-		(attr smd dnp)
+		(attr smd exclude_from_pos_files dnp)
 		(fp_line
 			(start -0.254724 -0.5225)
 			(end 0.254724 -0.5225)
@@ -7080,6 +7164,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C23162"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "67c6a2de-ae61-4a13-b8f1-b976e4d1f6a1")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -7375,6 +7471,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C21190"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "1b4d9efb-294b-44fa-8434-d47252483c74")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/82b1eb82-c747-4b4e-a751-fd261a2456da")
 		(sheetname "/")
@@ -7661,6 +7769,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C21189"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "0bb1a012-eaee-4c8a-8b07-24a8145c532c")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -7965,6 +8085,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C84263"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "11c9f925-f7ff-48e8-83e4-a4958e83459f")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -8278,6 +8410,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C21190"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "43bccfa5-8c5b-40dc-8d37-2e8638de5fba")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -8692,6 +8836,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C15849"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "f74dd43b-2a58-45c2-8496-ad790c484e09")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "C_*")
 		(path "/83a92fd4-df83-499b-ad91-0ed5d7cc7b25/3398dd20-aad0-4085-8766-3bdd9a855a17")
 		(sheetname "/Unity Opamp + Adj Opamp/")
@@ -8979,6 +9135,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C21190"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "415d04f0-5c46-45d0-91ab-41767f7afde9")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -9274,6 +9442,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C21190"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "cacbf75c-9578-48d4-b8cb-c0c2e63eb535")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/2d9c384b-043e-47f0-a8fb-1f8339848496")
 		(sheetname "/")
@@ -9561,6 +9741,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C21190"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "8179cdd9-6bbf-4cdc-83d8-6bb43e4ea5f0")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -14721,12 +14913,12 @@
 		(descr "THT rectangular pad as test Point, square 1.5mm side length, hole diameter 0.7mm")
 		(tags "test point THT pad rectangle square")
 		(property "Reference" "GNDA1"
-			(at -0.875 -1.7 0)
+			(at -0.1 1.875 0)
 			(layer "F.SilkS")
 			(uuid "3a9d285b-fdaf-4e1c-9f30-3017d2533180")
 			(effects
 				(font
-					(size 1 1)
+					(size 0.6 0.6)
 					(thickness 0.15)
 				)
 			)
@@ -15094,6 +15286,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C23162"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "017bfb2b-9ee9-40f7-84b1-13ec0d5bbb21")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -15933,6 +16137,18 @@
 				)
 			)
 		)
+		(property "LCSC" "C21190"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "53bb7dc2-983d-4db7-aa8c-c5da28e02735")
+			(effects
+				(font
+					(size 1.27 1.27)
+					(thickness 0.15)
+				)
+			)
+		)
 		(property ki_fp_filters "R_*")
 		(path "/31d438f2-04c9-4015-80fb-d84aa7e32875")
 		(sheetname "/")
@@ -16206,6 +16422,18 @@
 			(effects
 				(font
 					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "LCSC" "C23162"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "43120f47-9de3-4445-8444-5ba32d825144")
+			(effects
+				(font
+					(size 1.27 1.27)
 					(thickness 0.15)
 				)
 			)
@@ -17925,7 +18153,7 @@
 		(path "/9d01905a-9db7-4c9f-a739-1ce556312e88")
 		(sheetname "/")
 		(sheetfile "Sus-RH.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -0.3 1.534264)
 			(end 0 1.11)
@@ -18392,7 +18620,7 @@
 		(path "/cb97c3a4-03c3-4597-b50a-7727396f6b92")
 		(sheetname "/")
 		(sheetfile "Sus-RH.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start -0.3 1.534264)
 			(end 0 1.11)
@@ -18826,7 +19054,7 @@
 		(path "/8753333c-0da1-423c-8671-e4f5b7e60be8")
 		(sheetname "/")
 		(sheetfile "Sus-RH.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 10.49 1.83)
 			(end 1.81 1.83)
@@ -19362,7 +19590,7 @@
 		(path "/0aea4868-e1d1-4e8f-b72c-1f787bef01df")
 		(sheetname "/")
 		(sheetfile "Sus-RH.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 10.49 1.83)
 			(end 1.81 1.83)
@@ -20767,7 +20995,7 @@
 		(path "/6897adb0-7613-49be-834d-723bfa55ce09")
 		(sheetname "/")
 		(sheetfile "Sus-RH.kicad_sch")
-		(attr through_hole)
+		(attr through_hole exclude_from_pos_files)
 		(fp_line
 			(start 1.81 1.83)
 			(end 1.81 -11.83)
@@ -47031,12 +47259,12 @@
 		)
 	)
 	(gr_text "GNDA1"
-		(at 122.475 61 -0)
+		(at 123.1 64.675 0)
 		(layer "B.SilkS")
 		(uuid "d746390a-0850-40bc-acad-8c77ae4725e7")
 		(effects
 			(font
-				(size 1 1)
+				(size 0.6 0.6)
 				(thickness 0.15)
 			)
 			(justify mirror)
