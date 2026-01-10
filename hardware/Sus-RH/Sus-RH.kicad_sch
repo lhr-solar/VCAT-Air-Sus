@@ -112,7 +112,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector_Generic:Conn_01x03"
+		(symbol "Connector_Generic:Conn_01x04"
 			(pin_names
 				(offset 1.016)
 				(hide yes)
@@ -128,8 +128,8 @@
 					)
 				)
 			)
-			(property "Value" "Conn_01x03"
-				(at 0 -5.08 0)
+			(property "Value" "Conn_01x04"
+				(at 0 -7.62 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -154,7 +154,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
 				(at 0 0 0)
 				(effects
 					(font
@@ -181,10 +181,10 @@
 					(hide yes)
 				)
 			)
-			(symbol "Conn_01x03_1_1"
+			(symbol "Conn_01x04_1_1"
 				(rectangle
 					(start -1.27 3.81)
-					(end 1.27 -3.81)
+					(end 1.27 -6.35)
 					(stroke
 						(width 0.254)
 						(type default)
@@ -218,6 +218,17 @@
 				(rectangle
 					(start -1.27 -2.413)
 					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -4.953)
+					(end 0 -5.207)
 					(stroke
 						(width 0.1524)
 						(type default)
@@ -273,6 +284,24 @@
 						)
 					)
 					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -5.08 0)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -2713,10 +2742,10 @@
 		)
 		(uuid "f8439add-74ee-4e01-8950-4fc0c4e3e1e9")
 	)
-	(text_box "Linear Potentiometer Config\n1x3 Nanofit\n"
+	(text_box "Linear Potentiometer Config\n1x4 Nanofit\n"
 		(exclude_from_sim no)
-		(at 149.86 50.8 0)
-		(size 38.1 27.94)
+		(at 152.4 50.8 0)
+		(size 43.18 30.48)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
 			(width 0)
@@ -2798,6 +2827,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "8d324c7b-6b37-4632-a2b2-d01b9663a45b")
+	)
+	(junction
+		(at 175.26 71.12)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "931f681d-63dc-43ba-83d7-58d035407f24")
 	)
 	(junction
 		(at 275.59 40.64)
@@ -3737,6 +3772,16 @@
 	)
 	(wire
 		(pts
+			(xy 165.1 71.12) (xy 175.26 71.12)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b60446c6-000b-4f0c-b97b-0e2f3afbe35c")
+	)
+	(wire
+		(pts
 			(xy 265.43 27.94) (xy 265.43 29.21)
 		)
 		(stroke
@@ -3937,6 +3982,16 @@
 	)
 	(wire
 		(pts
+			(xy 175.26 71.12) (xy 175.26 72.39)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1611534-327a-4500-adc4-ebedc1f12a87")
+	)
+	(wire
+		(pts
 			(xy 74.93 140.97) (xy 74.93 143.51)
 		)
 		(stroke
@@ -3967,7 +4022,7 @@
 	)
 	(wire
 		(pts
-			(xy 175.26 66.04) (xy 175.26 72.39)
+			(xy 175.26 66.04) (xy 175.26 71.12)
 		)
 		(stroke
 			(width 0)
@@ -19074,77 +19129,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_01x03")
-		(at 160.02 66.04 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "cb97c3a4-03c3-4597-b50a-7727396f6b92")
-		(property "Reference" "J6"
-			(at 160.02 57.15 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "Conn_01x03"
-			(at 160.02 59.69 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Molex:Molex_Nano-Fit_105313-xx03_1x03_P2.50mm_Horizontal"
-			(at 160.02 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 160.02 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
-			(at 160.02 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f9f9c2c2-5b5b-4694-924d-3f7cd6262846")
-		)
-		(pin "2"
-			(uuid "dddfd34f-cae7-4a06-85ca-e980dbe479fc")
-		)
-		(pin "3"
-			(uuid "b3bba9f7-c9a5-4c37-af75-24317466a534")
-		)
-		(instances
-			(project ""
-				(path "/5f8d513b-42c2-4d15-b515-d2d66a528ded"
-					(reference "J6")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector:TestPoint")
 		(at 34.29 91.44 270)
 		(unit 1)
@@ -19940,6 +19924,80 @@
 			(project "Sus-RH"
 				(path "/5f8d513b-42c2-4d15-b515-d2d66a528ded"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_01x04")
+		(at 160.02 68.58 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ef28c27e-5f89-491f-ad9f-50d11084ec1c")
+		(property "Reference" "J6"
+			(at 160.02 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "Conn_01x04"
+			(at 160.02 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_Molex:Molex_Nano-Fit_105313-xx04_1x04_P2.50mm_Horizontal"
+			(at 160.02 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 160.02 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"
+			(at 160.02 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3b999b5c-d6b5-4e49-8cc5-cdd0c5765300")
+		)
+		(pin "2"
+			(uuid "743e50c8-7783-42c2-8233-234038d3917f")
+		)
+		(pin "3"
+			(uuid "fe9c2ee4-2276-4f78-80eb-3f555fa52238")
+		)
+		(pin "4"
+			(uuid "422c3290-9057-43ff-bab4-df11e966f77f")
+		)
+		(instances
+			(project ""
+				(path "/5f8d513b-42c2-4d15-b515-d2d66a528ded"
+					(reference "J6")
 					(unit 1)
 				)
 			)
