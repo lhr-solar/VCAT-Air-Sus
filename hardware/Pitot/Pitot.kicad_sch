@@ -2272,7 +2272,7 @@
 	)
 	(text_box "Temperature 1&2\n"
 		(exclude_from_sim no)
-		(at 76.2 50.8 0)
+		(at 76.2 55.88 0)
 		(size 50.8 30.48)
 		(margins 0.9525 0.9525 0.9525 0.9525)
 		(stroke
