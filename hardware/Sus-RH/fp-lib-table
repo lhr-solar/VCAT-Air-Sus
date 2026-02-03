@@ -9,5 +9,5 @@
   (lib (name "UTSVT_Connectors")(type "KiCad")(uri "${KIPRJMOD}/../../lib/KiCAD-Sharepoint/UTSVT_Connectors.pretty")(options "")(descr ""))
   (lib (name "footprints")(type "KiCad")(uri "${KIPRJMOD}/../../lib/TLV9002QDRQ1/footprints.pretty")(options "")(descr ""))
   (lib (name "4pinRes")(type "KiCad")(uri "${KIPRJMOD}/../../lib/4pinRes")(options "")(descr ""))
-  (lib (name "custom")(type "KiCad")(uri "${KIPRJMOD}/../../lib/custom")(options "")(descr ""))
+  (lib (name "custom")(type "KiCad")(uri "${KIPRJMOD}/../../lib/custom/footprints")(options "")(descr ""))
 )
