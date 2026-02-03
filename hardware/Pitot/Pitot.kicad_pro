@@ -629,6 +629,12 @@
           "label": "Footprint",
           "name": "Footprint",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "JLC P/N",
+          "name": "JLC P/N",
+          "show": true
         }
       ],
       "filter_string": "",
