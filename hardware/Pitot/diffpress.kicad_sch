@@ -2083,7 +2083,7 @@
 				)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "UTSVT_Connectors:HSCDRRN010NDSA3"
 			(at 132.08 77.47 0)
 			(effects
 				(font
