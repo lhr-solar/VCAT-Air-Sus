@@ -12953,7 +12953,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 30.48 88.9 0)
+		(at 29.21 88.9 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12961,7 +12961,7 @@
 		(dnp no)
 		(uuid "3ad7e041-eca9-4143-a74f-5998b6139058")
 		(property "Reference" "R7"
-			(at 32.258 87.63 0)
+			(at 30.988 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12970,7 +12970,7 @@
 			)
 		)
 		(property "Value" "120"
-			(at 32.512 89.9161 0)
+			(at 31.242 89.9161 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12979,7 +12979,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 28.702 88.9 90)
+			(at 27.432 88.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12988,7 +12988,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 30.48 88.9 0)
+			(at 29.21 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12997,7 +12997,7 @@
 			)
 		)
 		(property "Description" "Resistor"
-			(at 30.48 88.9 0)
+			(at 29.21 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13006,7 +13006,7 @@
 			)
 		)
 		(property "P/N" "CRCW06031K00FKEI "
-			(at 30.48 88.9 0)
+			(at 29.21 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13015,7 +13015,7 @@
 			)
 		)
 		(property "JLC P/N" ""
-			(at 30.48 88.9 0)
+			(at 29.21 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)

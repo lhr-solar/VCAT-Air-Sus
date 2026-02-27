@@ -47786,6 +47786,44 @@
 			)
 		)
 	)
+	(dimension
+		(type orthogonal)
+		(layer "User.1")
+		(uuid "8c2acb26-c344-49e2-a859-381fdd2ea957")
+		(pts
+			(xy 104.2 93.306694) (xy 147.855275 93.289995)
+		)
+		(height 12.493306)
+		(orientation 0)
+		(format
+			(prefix "")
+			(suffix "")
+			(units 3)
+			(units_format 0)
+			(precision 4)
+			(suppress_zeroes yes)
+		)
+		(style
+			(thickness 0.1)
+			(arrow_length 1.27)
+			(text_position_mode 0)
+			(arrow_direction outward)
+			(extension_height 0.58642)
+			(extension_offset 0.5)
+			(keep_text_aligned yes)
+		)
+		(gr_text "43.6553"
+			(at 126.027638 104.65 0)
+			(layer "User.1")
+			(uuid "8c2acb26-c344-49e2-a859-381fdd2ea957")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+	)
 	(segment
 		(start 139.45 66.75)
 		(end 136.95 66.75)
