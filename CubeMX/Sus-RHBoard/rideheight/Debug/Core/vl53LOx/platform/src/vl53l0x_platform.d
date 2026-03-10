@@ -1,4 +1,12 @@
-Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
+Core/vl53LOx/platform/src/vl53l0x_platform.o: \
+ ../Core/vl53LOx/platform/src/vl53l0x_platform.c \
+ ../Core/vl53LOx/platform/inc/vl53l0x_platform.h \
+ ../Core/vl53LOx/core/inc/vl53l0x_def.h \
+ ../Core/vl53LOx/core/inc/vl53l0x_device.h \
+ ../Core/vl53LOx/platform/inc/vl53l0x_types.h \
+ ../Core/vl53LOx/core/inc/vl53l0x_api.h \
+ ../Core/vl53LOx/core/inc/vl53l0x_api_strings.h \
+ ../Core/vl53LOx/core/inc/vl53l0x_def.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../Core/Inc/stm32l4xx_hal_conf.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -30,15 +38,14 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h \
  ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h \
- ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h \
- ../Core/vl53LOx/core/inc/vl53l0x_api.h \
- ../Core/vl53LOx/core/inc/vl53l0x_api_strings.h \
- ../Core/vl53LOx/core/inc/vl53l0x_def.h \
- ../Core/vl53LOx/core/inc/vl53l0x_device.h \
- ../Core/vl53LOx/platform/inc/vl53l0x_types.h \
- ../Core/vl53LOx/platform/inc/vl53l0x_platform.h \
- ../Core/vl53LOx/core/inc/vl53l0x_def.h
-../Core/Inc/main.h:
+ ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h
+../Core/vl53LOx/platform/inc/vl53l0x_platform.h:
+../Core/vl53LOx/core/inc/vl53l0x_def.h:
+../Core/vl53LOx/core/inc/vl53l0x_device.h:
+../Core/vl53LOx/platform/inc/vl53l0x_types.h:
+../Core/vl53LOx/core/inc/vl53l0x_api.h:
+../Core/vl53LOx/core/inc/vl53l0x_api_strings.h:
+../Core/vl53LOx/core/inc/vl53l0x_def.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h:
@@ -71,10 +78,3 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pwr_ex.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_uart_ex.h:
-../Core/vl53LOx/core/inc/vl53l0x_api.h:
-../Core/vl53LOx/core/inc/vl53l0x_api_strings.h:
-../Core/vl53LOx/core/inc/vl53l0x_def.h:
-../Core/vl53LOx/core/inc/vl53l0x_device.h:
-../Core/vl53LOx/platform/inc/vl53l0x_types.h:
-../Core/vl53LOx/platform/inc/vl53l0x_platform.h:
-../Core/vl53LOx/core/inc/vl53l0x_def.h:
