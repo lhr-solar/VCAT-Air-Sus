@@ -635,6 +635,18 @@
           "label": "JLC P/N",
           "name": "JLC P/N",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Description_1",
+          "name": "Description_1",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Digikey P/N",
+          "name": "Digikey P/N",
+          "show": false
         }
       ],
       "filter_string": "",
