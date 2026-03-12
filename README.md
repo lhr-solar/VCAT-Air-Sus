@@ -60,5 +60,5 @@ Simple boards that use nano-fits to connect to the boards above to add functiona
 **Function:** Provides the distance from the bottom of the car to the road in multiple areas.
 **Sensor** VL53L0X
 
-![Ride Height Breakout 3D Render/Photo](images/rideheight.png)
+![Ride Height Breakout 3D Render/Photo](images/irBoard.png)
 ---
