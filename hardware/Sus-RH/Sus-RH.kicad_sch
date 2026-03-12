@@ -2702,7 +2702,7 @@
 		)
 		(uuid "b0045716-034b-4df5-8173-938501b85f3c")
 	)
-	(text_box "2x4 Nanofit Req. One connector is IN and the other is OUT"
+	(text_box "2x4 Nanofit Req. One is IN and the other is OUT"
 		(exclude_from_sim no)
 		(at 91.44 50.8 0)
 		(size 55.88 30.48)
