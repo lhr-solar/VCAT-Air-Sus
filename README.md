@@ -19,6 +19,7 @@ This repository contains the hardware design files for 4 sensors on the car: Sus
 ## Telemetry CAN Overview
 
 ![System Block Diagram](images/bottomTelemetry.png)
+
 P - Pitot Board
 T - Temperature Breakout
 L - Telemetry Leader
