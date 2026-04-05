@@ -2629,6 +2629,39 @@
 		)
 		(uuid "aa481338-5350-4e38-8138-1231273f5a26")
 	)
+	(text "pb0"
+		(exclude_from_sim no)
+		(at 274.066 72.136 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "c9c0299f-228b-48f4-ac20-fce4c01d2da0")
+	)
+	(text "pb3\n"
+		(exclude_from_sim no)
+		(at 273.812 74.676 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "cecbd43b-266b-46c5-af76-a8bde6f30fb3")
+	)
+	(text "pa11"
+		(exclude_from_sim no)
+		(at 273.558 80.264 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "e144c5a5-ddfe-4537-976e-08c28616073c")
+	)
 	(text "gpio_out\n"
 		(exclude_from_sim no)
 		(at 262.89 72.39 0)
@@ -2650,6 +2683,17 @@
 			(justify left)
 		)
 		(uuid "ed3de02e-f8c0-49e0-9c85-1ed1649bfd13")
+	)
+	(text "pa12\n"
+		(exclude_from_sim no)
+		(at 273.558 77.216 0)
+		(effects
+			(font
+				(size 1.016 1.016)
+			)
+			(justify left)
+		)
+		(uuid "f72ed6ad-d3da-4234-81df-cc4dc06af606")
 	)
 	(text "gpio_out\n"
 		(exclude_from_sim no)
