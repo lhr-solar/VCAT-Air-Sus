@@ -64,7 +64,10 @@ typedef struct{
 } CircularFIFO;
 
 PackedCANMSG msg_buffer[64];
+
 CircularFIFO my_fifo;
+
+volatile uint16_t timestamp = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -81,6 +84,7 @@ uint8_t fifo_is_empty(CircularFIFO *f);
 uint8_t fifo_is_full(CircularFIFO *f);
 uint8_t fifo_enqueue(CircularFIFO *f, PackedCANMSG message);
 uint8_t fifo_dequeue(CircularFIFO *f, PackedCANMSG *message);
+uint8_t calculateTimings(uint32_t sysClockSpeed, uint32_t targetSpeed, uint16_t* psc,uint16_t* arr);
 void fifo_reset(CircularFIFO *f);
 void proccess_adc_reading(uint16_t new_adc_val);
 /* USER CODE END PFP */
@@ -105,7 +109,6 @@ void proccess_adc_reading(uint16_t new_adc_val){
   adc_count++;
   if(adc_count == 4){
     PackedCANMSG new_msg;
-    uint16_t timestamp = 395;
 
     new_msg.bytes[0] = (timestamp >> 8) & 0xFF; // high byte
     new_msg.bytes[1] = timestamp & 0xFF; // low byte
@@ -195,7 +198,6 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -236,12 +238,47 @@ int main(void)
 
   uint32_t last_heartbeat = 0; 
 
+
+
+  uint16_t prescaler;
+  uint16_t period;
+  uint8_t result = calculateTimings(80000000,500,&prescaler, &period);
+  if(result){
+    htim2.Instance->PSC = prescaler;
+    htim2.Instance->ARR = period;
+    
+    // Force the timer to update its internal shadow registers
+    htim2.Instance->EGR = TIM_EGR_UG;
+  }
+
   // start hardware perifierals
   HAL_CAN_Start(&hcan1);
   HAL_TIM_Base_Start_IT(&htim2);
   HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
 
   fifo_init(&my_fifo, msg_buffer, 64);
+
+  // CAN RECIEVE CODE:
+
+  // CAN Recieve Filters: only filters out 
+  CAN_FilterTypeDef filterConfig;
+  filterConfig.FilterBank = 0;
+  filterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
+  filterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
+  filterConfig.FilterIdHigh = 0x0000;
+  filterConfig.FilterIdLow = 0x0000;
+  filterConfig.FilterMaskIdHigh = 0x0000;
+  filterConfig.FilterMaskIdLow = 0x0000;
+  filterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;
+  filterConfig.FilterActivation = ENABLE;
+  filterConfig.SlaveStartFilterBank = 14;
+
+  HAL_CAN_ConfigFilter(&hcan1, &filterConfig);
+
+  HAL_CAN_ActivateNotification(&hcan1, CAN_IT_RX_FIFO0_MSG_PENDING);
+
+  HAL_NVIC_SetPriority(CAN1_RX0_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(CAN1_RX0_IRQn);
 
   /* USER CODE END 2 */
 
@@ -311,11 +348,16 @@ void SystemClock_Config(void)
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
-  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_MSI;
-  RCC_OscInitStruct.MSIState = RCC_MSI_ON;
-  RCC_OscInitStruct.MSICalibrationValue = 0;
-  RCC_OscInitStruct.MSIClockRange = RCC_MSIRANGE_6;
-  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_NONE;
+  RCC_OscInitStruct.OscillatorType = RCC_OSCILLATORTYPE_HSI;
+  RCC_OscInitStruct.HSIState = RCC_HSI_ON;
+  RCC_OscInitStruct.HSICalibrationValue = RCC_HSICALIBRATION_DEFAULT;
+  RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
+  RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSI;
+  RCC_OscInitStruct.PLL.PLLM = 1;
+  RCC_OscInitStruct.PLL.PLLN = 10;
+  RCC_OscInitStruct.PLL.PLLP = RCC_PLLP_DIV7;
+  RCC_OscInitStruct.PLL.PLLQ = RCC_PLLQ_DIV2;
+  RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
   if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
   {
     Error_Handler();
@@ -325,12 +367,12 @@ void SystemClock_Config(void)
   */
   RCC_ClkInitStruct.ClockType = RCC_CLOCKTYPE_HCLK|RCC_CLOCKTYPE_SYSCLK
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
-  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_MSI;
+  RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_0) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
   {
     Error_Handler();
   }
@@ -414,11 +456,11 @@ static void MX_CAN1_Init(void)
 
   /* USER CODE END CAN1_Init 1 */
   hcan1.Instance = CAN1;
-  hcan1.Init.Prescaler = 1;
+  hcan1.Init.Prescaler = 10;
   hcan1.Init.Mode = CAN_MODE_NORMAL;
   hcan1.Init.SyncJumpWidth = CAN_SJW_1TQ;
-  hcan1.Init.TimeSeg1 = CAN_BS1_5TQ;
-  hcan1.Init.TimeSeg2 = CAN_BS2_2TQ;
+  hcan1.Init.TimeSeg1 = CAN_BS1_12TQ;
+  hcan1.Init.TimeSeg2 = CAN_BS2_3TQ;
   hcan1.Init.TimeTriggeredMode = DISABLE;
   hcan1.Init.AutoBusOff = ENABLE;
   hcan1.Init.AutoWakeUp = ENABLE;
@@ -451,7 +493,7 @@ static void MX_I2C1_Init(void)
 
   /* USER CODE END I2C1_Init 1 */
   hi2c1.Instance = I2C1;
-  hi2c1.Init.Timing = 0x00100D14;
+  hi2c1.Init.Timing = 0x10D19CE4;
   hi2c1.Init.OwnAddress1 = 0;
   hi2c1.Init.AddressingMode = I2C_ADDRESSINGMODE_7BIT;
   hi2c1.Init.DualAddressMode = I2C_DUALADDRESS_DISABLE;
@@ -499,10 +541,9 @@ static void MX_TIM2_Init(void)
   TIM_MasterConfigTypeDef sMasterConfig = {0};
 
   /* USER CODE BEGIN TIM2_Init 1 */
-
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 1000; //3999
+  htim2.Init.Prescaler = 3999;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
   htim2.Init.Period = 9;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
@@ -580,13 +621,13 @@ static void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5|GPIO_PIN_11|GPIO_PIN_12, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_11|GPIO_PIN_12, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, GPIO_PIN_11|GPIO_PIN_3, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : PA5 PA11 PA12 */
-  GPIO_InitStruct.Pin = GPIO_PIN_5|GPIO_PIN_11|GPIO_PIN_12;
+  /*Configure GPIO pins : PA5 PA6 PA11 PA12 */
+  GPIO_InitStruct.Pin = GPIO_PIN_5|GPIO_PIN_6|GPIO_PIN_11|GPIO_PIN_12;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -605,6 +646,26 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+uint8_t calculateTimings(uint32_t sysClockSpeed, uint32_t targetSpeed, uint16_t* psc, uint16_t* arr){
+  
+  uint32_t div = sysClockSpeed / targetSpeed; 
+  
+  if (div == 0 || (sysClockSpeed % targetSpeed != 0)) {
+      return 0; // Cannot hit this exact frequency cleanly
+  }
+  for(uint32_t psc1 = 1; psc1 <= 65536; psc1++){
+    if(div % psc1 == 0){
+      uint32_t arr1 = div / psc1;
+        // does it fit?? 
+        if (arr1 <= 65536) {
+            *psc = (uint16_t)(psc1 - 1);
+            *arr = (uint16_t)(arr1 - 1);
+            return 1; 
+        }
+    }
+  }
+  return 0;
+}
 
 // interrupt service routine for Tim1
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
@@ -612,10 +673,24 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
   // comes here for all instances of TIMER interrupt occuring, so we must check if this one is the right one. 
   if(htim->Instance == TIM2){ 
 
-    uint16_t value = readADC();
-    HAL_GPIO_TogglePin(GPIOB,GPIO_PIN_5);
+    int16_t value = readADC();
+    HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_5);
     if(value != -1){
         proccess_adc_reading(value);
+    }
+  }
+}
+
+// interrupt service routine for CANRX
+void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan){
+  if(hcan->Instance == CAN1){
+    CAN_RxHeaderTypeDef recieve;
+    uint8_t data[8];
+    if(HAL_CAN_GetRxMessage(hcan,CAN_RX_FIFO0,&recieve,data) == HAL_OK){
+      if(recieve.StdId == 0x00){
+        timestamp = (data[0] << 8) | data[1];
+        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_6);
+      }
     }
   }
 }
