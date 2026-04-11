@@ -1,0 +1,10 @@
+../Drivers/VL5/platform/src/vl53l0x_platform.c:9:15:VL53L0X_WriteMulti	2
+../Drivers/VL5/platform/src/vl53l0x_platform.c:14:15:VL53L0X_ReadMulti	2
+../Drivers/VL5/platform/src/vl53l0x_platform.c:19:15:VL53L0X_WrByte	1
+../Drivers/VL5/platform/src/vl53l0x_platform.c:23:15:VL53L0X_WrWord	1
+../Drivers/VL5/platform/src/vl53l0x_platform.c:28:15:VL53L0X_WrDWord	1
+../Drivers/VL5/platform/src/vl53l0x_platform.c:33:15:VL53L0X_RdByte	1
+../Drivers/VL5/platform/src/vl53l0x_platform.c:37:15:VL53L0X_RdWord	2
+../Drivers/VL5/platform/src/vl53l0x_platform.c:46:15:VL53L0X_RdDWord	2
+../Drivers/VL5/platform/src/vl53l0x_platform.c:55:15:VL53L0X_UpdateByte	2
+../Drivers/VL5/platform/src/vl53l0x_platform.c:65:15:VL53L0X_PollingDelay	1
