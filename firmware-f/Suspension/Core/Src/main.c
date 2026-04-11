@@ -22,6 +22,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
+#include "can_fifo.h"
+#include "adcMeasurements.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -51,17 +53,6 @@ TIM_HandleTypeDef htim2;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
-typedef struct {
-    uint8_t bytes[8];
-} PackedCANMSG;
-
-typedef struct{
-  PackedCANMSG *buffer;
-  volatile int head;
-  volatile int tail;
-  int max_len;
-  volatile int count;
-} CircularFIFO;
 
 PackedCANMSG msg_buffer[64];
 
@@ -79,28 +70,11 @@ static void MX_I2C1_Init(void);
 static void MX_CAN1_Init(void);
 static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
-uint8_t fifo_init(CircularFIFO *f, PackedCANMSG *user_buffer, int size);
-uint8_t fifo_is_empty(CircularFIFO *f);
-uint8_t fifo_is_full(CircularFIFO *f);
-uint8_t fifo_enqueue(CircularFIFO *f, PackedCANMSG message);
-uint8_t fifo_dequeue(CircularFIFO *f, PackedCANMSG *message);
-uint8_t calculateTimings(uint32_t sysClockSpeed, uint32_t targetSpeed, uint16_t* psc,uint16_t* arr);
-void fifo_reset(CircularFIFO *f);
 void proccess_adc_reading(uint16_t new_adc_val);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-int16_t readADC(void) {
-    HAL_ADC_Start(&hadc1);
-    if (HAL_ADC_PollForConversion(&hadc1, 1000) == HAL_OK) {
-        uint16_t adcValue = HAL_ADC_GetValue(&hadc1);
-        HAL_ADC_Stop(&hadc1);
-        return adcValue;
-    }
-    HAL_ADC_Stop(&hadc1);
-    return -1;
-}
 
 void proccess_adc_reading(uint16_t new_adc_val){
   static uint16_t temp_read[4];
@@ -133,61 +107,6 @@ void proccess_adc_reading(uint16_t new_adc_val){
     adc_count = 0;
   }
 }
-
-uint8_t fifo_init(CircularFIFO *f, PackedCANMSG *user_buffer, int size) {
-    f->buffer = user_buffer;
-    f->max_len = size;
-    f->tail = 0;
-    f->head = 0;
-    f->count = 0;
-    return 1;
-}
-
-uint8_t fifo_is_empty(CircularFIFO *f) {
-    return (f->count == 0);
-}
-
-uint8_t fifo_is_full(CircularFIFO *f) {
-    if(f->count >= f->max_len){
-        return 1;
-    }else{
-        return 0;
-    }
-}
-
-uint8_t fifo_enqueue(CircularFIFO *f, PackedCANMSG message) {
-  
-    if(fifo_is_full(f)){
-        return 0;
-    }
-    f->buffer[f->tail] = message;
-    f->tail++;
-    f->count++;
-    if(f->tail >=  f->max_len){
-        f->tail = 0;
-    }
-    return 1; 
-}
-
-uint8_t fifo_dequeue(CircularFIFO *f, PackedCANMSG *message) {
-    if(fifo_is_empty(f)){
-        return 0;
-    }
-    *message = f->buffer[f->head];
-    f->head++;
-    if(f->head >= f->max_len){
-        f->head = 0;
-    }
-    f->count--;
-    return 1;
-}
-void fifo_reset(CircularFIFO *f) {
-    f->tail = 0;
-    f->head = 0;
-    f->count = 0;
-    return;
-}
-
 /* USER CODE END 0 */
 
 /**
@@ -237,8 +156,6 @@ int main(void)
   uint32_t txMailbox;
 
   uint32_t last_heartbeat = 0; 
-
-
 
   uint16_t prescaler;
   uint16_t period;
@@ -325,7 +242,7 @@ int main(void)
   }
     /* USER CODE END WHILE */
 
-    /* USER CODE BEGIN 3 */
+  /* USER CODE BEGIN 3 */
   /* USER CODE END 3 */
 }
 
@@ -646,35 +563,13 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-uint8_t calculateTimings(uint32_t sysClockSpeed, uint32_t targetSpeed, uint16_t* psc, uint16_t* arr){
-  
-  uint32_t div = sysClockSpeed / targetSpeed; 
-  
-  if (div == 0 || (sysClockSpeed % targetSpeed != 0)) {
-      return 0; // Cannot hit this exact frequency cleanly
-  }
-  for(uint32_t psc1 = 1; psc1 <= 65536; psc1++){
-    if(div % psc1 == 0){
-      uint32_t arr1 = div / psc1;
-        // does it fit?? 
-        if (arr1 <= 65536) {
-            *psc = (uint16_t)(psc1 - 1);
-            *arr = (uint16_t)(arr1 - 1);
-            return 1; 
-        }
-    }
-  }
-  return 0;
-}
-
 // interrupt service routine for Tim1
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
   
   // comes here for all instances of TIMER interrupt occuring, so we must check if this one is the right one. 
   if(htim->Instance == TIM2){ 
 
-    int16_t value = readADC();
-    HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_5);
+    int16_t value = readADC(&hadc1);
     if(value != -1){
         proccess_adc_reading(value);
     }

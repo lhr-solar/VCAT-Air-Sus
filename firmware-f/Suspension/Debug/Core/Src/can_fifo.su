@@ -1,0 +1,7 @@
+../Core/Src/can_fifo.c:2:9:fifo_init	24	static
+../Core/Src/can_fifo.c:11:9:fifo_is_empty	16	static
+../Core/Src/can_fifo.c:15:9:fifo_is_full	16	static
+../Core/Src/can_fifo.c:23:9:fifo_enqueue	24	static
+../Core/Src/can_fifo.c:37:9:fifo_dequeue	16	static
+../Core/Src/can_fifo.c:49:6:fifo_reset	16	static
+../Core/Src/can_fifo.c:56:9:calculateTimings	40	static
