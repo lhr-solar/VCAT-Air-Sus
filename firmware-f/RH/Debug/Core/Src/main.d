@@ -43,7 +43,8 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
  ../Drivers/VL5/core/inc/../../../VL5/core/inc/../../../VL5/platform/inc/vl53l0x_platform.h \
  ../Drivers/VL5/core/inc/../../../VL5/core/inc/../../../VL5/platform/inc/../../../VL5/core/inc/vl53l0x_def.h \
  ../Drivers/VL5/core/inc/../../../VL5/core/inc/vl53l0x_def.h \
- ../Drivers/VL5/core/inc/../../../VL5/platform/inc/vl53l0x_platform.h
+ ../Drivers/VL5/core/inc/../../../VL5/platform/inc/vl53l0x_platform.h \
+ ../Core/Inc/can_fifo.h
 ../Core/Inc/main.h:
 ../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 ../Core/Inc/stm32l4xx_hal_conf.h:
@@ -90,3 +91,4 @@ Core/Src/main.o: ../Core/Src/main.c ../Core/Inc/main.h \
 ../Drivers/VL5/core/inc/../../../VL5/core/inc/../../../VL5/platform/inc/../../../VL5/core/inc/vl53l0x_def.h:
 ../Drivers/VL5/core/inc/../../../VL5/core/inc/vl53l0x_def.h:
 ../Drivers/VL5/core/inc/../../../VL5/platform/inc/vl53l0x_platform.h:
+../Core/Inc/can_fifo.h:
