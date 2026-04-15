@@ -57,9 +57,6 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
-#define VL5_Interrupt_Pin GPIO_PIN_12
-#define VL5_Interrupt_GPIO_Port GPIOB
-#define VL5_Interrupt_EXTI_IRQn EXTI15_10_IRQn
 
 /* USER CODE BEGIN Private defines */
 

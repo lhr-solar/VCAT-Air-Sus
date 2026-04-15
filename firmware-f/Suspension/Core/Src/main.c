@@ -173,7 +173,7 @@ int main(void)
   HAL_TIM_Base_Start_IT(&htim2);
   HAL_ADCEx_Calibration_Start(&hadc1, ADC_SINGLE_ENDED);
 
-  fifo_init(&my_fifo, msg_buffer, 64);
+  fifo_init(&my_fifo, msg_buffer, 4000);
 
   // CAN RECIEVE CODE:
 

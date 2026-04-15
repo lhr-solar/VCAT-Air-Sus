@@ -21,9 +21,10 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "vl53l0x_api.h"
 #include <stdio.h>
 #include <string.h>
+#include "vl53l0x_api.h"
+#include "can_fifo.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -53,7 +54,11 @@ TIM_HandleTypeDef htim2;
 UART_HandleTypeDef huart1;
 
 /* USER CODE BEGIN PV */
+volatile uint8_t timer_10hz_flag = 0;
 
+CircularFIFO my_fifo;
+
+PackedCANMSG msg_buffer[64];
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -65,38 +70,11 @@ static void MX_I2C1_Init(void);
 static void MX_CAN1_Init(void);
 static void MX_TIM2_Init(void);
 /* USER CODE BEGIN PFP */
-VL53L0X_Dev_t vlDevice;
-VL53L0X_DEV rhSensor = &vlDevice;
-uint32_t currentRideHeight = 0;
-VL53L0X_Error sensorStatus = VL53L0X_ERROR_NONE;
+
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-void vl5init(VL53L0X_DEV dev){
-  uint32_t spadCnt;
-  uint8_t aperture;
-
-  // Capture the very first boot command
-  sensorStatus = VL53L0X_DataInit(dev);
-
-  // ERROR TRAP: If I2C fails, freeze the system right here
-  if(sensorStatus != VL53L0X_ERROR_NONE) {
-      while(1) {
-          // If you get stuck here, your STM32 cannot hear the sensor over I2C!
-      }
-  }
-
-  VL53L0X_StaticInit(dev);
-  VL53L0X_PerformRefCalibration(dev, NULL, NULL);
-  VL53L0X_PerformRefSpadManagement(dev, &spadCnt, &aperture);
-
-  VL53L0X_SetDeviceMode(dev, VL53L0X_DEVICEMODE_CONTINUOUS_RANGING);
-  VL53L0X_SetGpioConfig(dev, 0, VL53L0X_DEVICEMODE_CONTINUOUS_RANGING, VL53L0X_GPIOFUNCTIONALITY_NEW_MEASURE_READY, VL53L0X_INTERRUPTPOLARITY_LOW);
-  VL53L0X_ClearInterruptMask(dev, 0);
-
-  VL53L0X_StartMeasurement(dev);
-}
 
 /* USER CODE END 0 */
 
@@ -108,7 +86,6 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -117,6 +94,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
+
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -134,69 +112,129 @@ int main(void)
   MX_CAN1_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-  rhSensor->I2cDevAddr = 0x52;
-  vl5init(rhSensor);
+  HAL_Delay(100);
+
+  CAN_TxHeaderTypeDef txHeader;
+  txHeader.StdId = 0x404;
+  txHeader.IDE = CAN_ID_STD;
+  txHeader.RTR = CAN_RTR_DATA; // Data frame (not remote)
+  txHeader.DLC = 2; // 8 data bytes
+  txHeader.TransmitGlobalTime = DISABLE; // TTCM disabled → must be DISABLE
+
+  uint32_t txMailbox;
+  PackedCANMSG pack; 
+  uint8_t dequeued = 0;
+
+  VL53L0X_Dev_t MyDevice;
+  VL53L0X_DEV Dev = &MyDevice;
+  Dev->I2cDevAddr = 0x52;
+
+  char msg[64];
+  int len;
+
+  len = sprintf(msg, "Initializing Sensor...\r\n");
+  HAL_UART_Transmit(&huart1, (uint8_t*)msg, len, 100);
+
+  VL53L0X_DataInit(Dev);
+  VL53L0X_StaticInit(Dev);
+
+  uint32_t refSpadCount;
+  uint8_t isApertureSpads;
+  uint8_t VhvSettings;
+  uint8_t PhaseCal;
+
+  VL53L0X_PerformRefSpadManagement(Dev, &refSpadCount, &isApertureSpads);
+  VL53L0X_PerformRefCalibration(Dev, &VhvSettings, &PhaseCal);
+
+  VL53L0X_SetMeasurementTimingBudgetMicroSeconds(Dev, 33000);
+  VL53L0X_SetDeviceMode(Dev, VL53L0X_DEVICEMODE_CONTINUOUS_RANGING);
+  VL53L0X_StartMeasurement(Dev);
+
+  len = sprintf(msg, "VL53L0X Init Complete! Running at 10Hz.\r\n");
+  HAL_UART_Transmit(&huart1, (uint8_t*)msg, len, 100);
+
+  // Start the 10Hz timer
+
+  fifo_init(&my_fifo, msg_buffer, 64);
+
+  HAL_TIM_Base_Start_IT(&htim2);
+  HAL_CAN_Start(&hcan1);
+
+  CAN_FilterTypeDef filterConfig;
+  filterConfig.FilterBank = 0;
+  filterConfig.FilterMode = CAN_FILTERMODE_IDMASK;
+  filterConfig.FilterScale = CAN_FILTERSCALE_32BIT;
+  filterConfig.FilterIdHigh = 0x0000;
+  filterConfig.FilterIdLow = 0x0000;
+  filterConfig.FilterMaskIdHigh = 0x0000;
+  filterConfig.FilterMaskIdLow = 0x0000;
+  filterConfig.FilterFIFOAssignment = CAN_RX_FIFO0;
+  filterConfig.FilterActivation = ENABLE;
+  filterConfig.SlaveStartFilterBank = 14;
+
+  HAL_CAN_ConfigFilter(&hcan1, &filterConfig);
+
+  HAL_CAN_ActivateNotification(&hcan1, CAN_IT_RX_FIFO0_MSG_PENDING);
+
+  HAL_NVIC_SetPriority(CAN1_RX0_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(CAN1_RX0_IRQn);
+
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  while (1)
-  {
-    /* USER CODE END WHILE */
-	  VL53L0X_RangingMeasurementData_t RangingData;
-	  uint32_t timeout_counter = 0;
+  while (1){
+    if (timer_10hz_flag){
+      timer_10hz_flag = 0;
 
-	  // 1. Tell the sensor to start a new measurement
-	  VL53L0X_StartMeasurement(rhSensor);
+      HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_11);
+      HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5);
 
-	  // 2. THE POLLING LOOP
-	  // We read PB12 over and over. As long as it is HIGH (SET), we wait.
-	  while (HAL_GPIO_ReadPin(GPIOB, GPIO_PIN_12) == GPIO_PIN_SET)
-	  {
-	      HAL_Delay(1);          // Wait 1 millisecond
-	      timeout_counter++;     // Count how long we've been waiting
+      VL53L0X_RangingMeasurementData_t RangingData = {0};
+      uint8_t dataReady = 0;
+      uint32_t timeout_counter = 0;
 
-	      // Safety valve: If we wait too long, break out of the loop so the STM32 doesn't freeze forever
-	      if (timeout_counter > 100)
-	      {
-	          break;
-	      }
-	  }
+      // Poll over I2C 
+      while (dataReady == 0 && timeout_counter < 60){
+        VL53L0X_GetMeasurementDataReady(Dev, &dataReady);
+        HAL_Delay(1);
+        timeout_counter++;
+      }
+      if(dataReady){
+        VL53L0X_GetRangingMeasurementData(Dev, &RangingData);
+        
+        pack.canData[0] = (RangingData.RangeMilliMeter >> 8) & 0xFF;
+        pack.canData[1] = (RangingData.RangeMilliMeter) & 0xFF;
+        fifo_enqueue(&my_fifo,pack);
+      }
+      VL53L0X_ClearInterruptMask(Dev, 0);
+    }
 
-	  // 3. PROCESS THE RESULT
-	  // If we broke out of the loop before hitting the timeout, the pin must have gone LOW!
-	  if (timeout_counter <= 100)
-	  {
-	      // Fetch the distance
-	      VL53L0X_GetRangingMeasurementData(rhSensor, &RangingData);
+     if(HAL_CAN_GetTxMailboxesFreeLevel(&hcan1) > 0){
+      __disable_irq(); // Start Pause/section that would be cooked
+      dequeued = 0;
+      if(fifo_is_empty(&my_fifo) == 0){
+        fifo_dequeue(&my_fifo, &pack); 
+        dequeued = 1;
+      }
+      __enable_irq(); // End section that would be cooked by race condition
 
-	      // Save it to your global variable
-	      currentRideHeight = RangingData.RangeMilliMeter;
+      // Now this one can take however much time it needs to send out the data
+      if(dequeued == 1){
+        HAL_CAN_AddTxMessage(&hcan1, &txHeader, pack.canData , &txMailbox);
+      }
+    }
 
-	      // Tell the sensor we got the data so it resets the PB12 pin back to HIGH
-	      VL53L0X_ClearInterruptMask(rhSensor, 0);
-	  }
-	  else
-	  {
-	      // The timeout hit. The sensor is stuck or unplugged!
-	      // Handle the error here (like resetting the sensor)
-	  }
-
-	  char uartBuffer[50];
-
-	        // 2. Format the global variable into a readable string with a carriage return (\r) and newline (\n)
-	  sprintf(uartBuffer, "Ride Height: %lu mm\r\n", currentRideHeight);
-
-	        // 3. Send the formatted string out over UART1
-	  HAL_UART_Transmit(&huart1, (uint8_t*)uartBuffer, strlen(uartBuffer), 100);
-
-	        // 4. Wait a fraction of a second before sending the next update
-	        // (so you don't completely flood your serial monitor)
-    HAL_GPIO_TogglePin(GPIOB,GPIO_PIN_11);
-
-	HAL_Delay(100);
-    /* USER CODE BEGIN 3 */
+    // we want to turn on Error LED when buffer HAS data, but CAN isn't transmitting
+    if(fifo_is_empty(&my_fifo) != 1 && HAL_CAN_GetTxMailboxesFreeLevel(&hcan1) == 0){
+      // if you are here, the fifo is filling up, but CAN is stuck 
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_SET);
+    }else{
+      HAL_GPIO_WritePin(GPIOA, GPIO_PIN_12, GPIO_PIN_RESET);
+    }
   }
+    /* USER CODE BEGIN 3 */
   /* USER CODE END 3 */
 }
 
@@ -415,9 +453,9 @@ static void MX_TIM2_Init(void)
 
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 3999;
+  htim2.Init.Prescaler = 7999;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 9;
+  htim2.Init.Period = 332;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -512,36 +550,22 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pin : VL5_Interrupt_Pin */
-  GPIO_InitStruct.Pin = VL5_Interrupt_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_IT_FALLING;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(VL5_Interrupt_GPIO_Port, &GPIO_InitStruct);
-
-  /* EXTI interrupt init*/
-  HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0, 0);
-  HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
-
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 
   /* USER CODE END MX_GPIO_Init_2 */
 }
 
 /* USER CODE BEGIN 4 */
-// void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
-//     if(GPIO_Pin == VL5_Interrupt_Pin) {
-//         VL53L0X_RangingMeasurementData_t measure;
-
-//         // Read the distance
-//         VL53L0X_GetRangingMeasurementData(rhSensor, &measure);
-
-//         // Save it to the global variable so the rest of the car can read it!
-//         currentRideHeight = measure.RangeMilliMeter;
-
-//         // Tell the sensor we got the data so it fires the next interrupt
-//         VL53L0X_ClearInterruptMask(rhSensor, 0);
-//     }
-// }
+/**
+  * @brief  Timer period elapsed callback — fires at 10 Hz from TIM2.
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+  if (htim->Instance == TIM2)
+  {
+    timer_10hz_flag = 1;
+  }
+}
 /* USER CODE END 4 */
 
 /**
